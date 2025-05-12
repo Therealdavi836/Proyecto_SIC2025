@@ -25,6 +25,21 @@ random.seed(1)  # Fijamos semilla para reproducibilidad
 
 ##### FUNCIONES PARA OPERADORES
 
+def tablaMutaciones():
+  mutaciones = []
+  for x in range(n):
+    mutaciones.append(np.random.rand())
+  return mutaciones
+
+def muta(mutacion, hijo):
+  condicion = 5/100
+  for x in range(n):
+    if mutacion[x]<condicion:
+      if hijo[x] == 0:
+        hijo[x] = 1
+      else:
+        hijo[x] = 0
+
 def evalua(n,x,poblIt,utilidad):
     suma=0
     total=0
@@ -54,20 +69,21 @@ def seleccion(acumulado):
     
     for i in range(0,n):
       if acumulado[i]>escoje:
-         padre=poblIt[i]
-         break
+        padre=poblIt[i]
+        break
     return (padre)
     
     
 def cruce(a1,p1,p2):
     if a1<Pcruce:
       print("Mas grande", Pcruce, "que ", a1, "-> Si Cruzan")
-
-      temp1=p1[0:3] #[i:j] corta desde [i a j)
-      temp2=p1[3:6]
+      puntoCorte = random.randint(1,5)
+      print("El punto de corte es entre el gen ", puntoCorte-1, " y el gen ", puntoCorte)
+      temp1=p1[0:puntoCorte] #[i:j] corta desde [i a j)
+      temp2=p1[puntoCorte:6]
       print(temp1,temp2)
-      temp3=p2[0:3]
-      temp4=p2[3:6]
+      temp3=p2[0:puntoCorte]
+      temp4=p2[puntoCorte:6]
       print(temp3,temp4)
 # Convert to list and then back to ndarray with dtype=int:
       hijo1 = np.array(temp1.tolist() + temp4.tolist(), dtype=int)
@@ -145,8 +161,16 @@ for iter in range(5):  # 5 iteraciones como en el Excel
     
     hijoA,hijoB=cruce(np.random.rand(),papa1,papa2)
     print("hijo1: ", hijoA)
+    mutacionHijoA = tablaMutaciones()
+    print("Mutacion del hijo1 ", mutacionHijoA)
+    muta(mutacionHijoA, hijoA)
+    print("hijo1 despues de la mutacion: ", hijoA)
     poblIt[i]=hijoA
     print("hijo2: ", hijoB)
+    mutacionHijoB = tablaMutaciones()
+    print("Mutacion del hijo2 ", mutacionHijoB)
+    muta(mutacionHijoB, hijoB)
+    print("hijo2 despues de la mutacion: ", hijoB, "\n")
     poblIt[i+1]=hijoB
     
   print("\n","Poblacion Iteración ", iter+1,"\n", poblIt)
