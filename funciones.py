@@ -80,21 +80,3 @@ def esFactible(individuo, fenotipo, funcion, restriccion):
     Un individuo es factible si el resultado de la función es menor que la restricción.
     """
     return resultadoFuncion(individuo, fenotipo, funcion) < restriccion
-
-
-
-''''
-funcionGlobal = funcionesAVectores("2x+3X+4X+5X")
-funcionFitness = funcionesAVectores("5Z+3Z+2Z+5Z")
-restriccion = 50
-tamPoblacion = 5
-valoresFenotipo = valoresMaxFenotipoBin(len(funcionGlobal))
-print("Funcion Global:", funcionGlobal)
-print("Valores de Fenotipo:", valoresFenotipo)
-poblacionInicial = generarPoblacionInicial(funcionGlobal, restriccion, tamPoblacion, valoresFenotipo)
-for individuo in poblacionInicial:
-    print("Individuo:", individuo)
-    print("Resultado de la funcion global:", resultadoFuncion(individuo, valoresFenotipo, funcionGlobal))
-    print("Resultado de la funcion fitness:", resultadoFuncion(individuo, valoresFenotipo, funcionFitness))
-    print("Lista de decimales:", listaDecimales(individuo, valoresFenotipo))
-'''
