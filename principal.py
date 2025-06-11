@@ -1,10 +1,122 @@
 from funciones import *
+from impresion import *
+from metodos import *
 
 #Parametros
 Pcruce = int(input("Ingrese el numero de cruces: " )) / 100
 Pmutacion = int(input("Ingrese el porcentaje de mutacion: ")) / 100
 tamPoblacion = int(input("Ingrese el tamaño de la población: "))
-funconGlobal = funcionesAVectores(input("Ingrese la función global: "))
-funconFitnness = funcionesAVectores(input("Ingrese la función fitness: "))
+funcionGlobal = funcionesAVectores(input("Ingrese la función global: "))
+funcionFitnness = funcionesAVectores(input("Ingrese la función fitness: "))
 restriccion = int(input("Ingrese la restricción: "))
-poblacionInicial = generarPoblacionInicial(funconFitnness, restriccion, tamPoblacion, funconGlobal)
+elitismo = 1
+respuesta = input("Desea crear una población inicial aleatoria? (s/n): ").lower()
+fenotipo = valoresMaxFenotipoBin(tamPoblacion)
+continuar = False
+if respuesta == 's':
+    continuar = True
+while continuar:
+    poblacionInicial = generarPoblacionInicial(funcionFitnness, restriccion, tamPoblacion, fenotipo)
+    #imprimir_tabla(poblacionInicial, funcionFitnness, funcionGlobal, restriccion, 0)
+    print(poblacionInicial)
+    continuar = (input("Desea continuar con la evolución? (s/n): ").lower()) != 's' 
+iteraciones = int(input("Ingrese el número de iteraciones: "))
+
+# Enumeración para métodos de selección
+class MetodoSeleccion(Enum):
+    RULETA = 1
+    TORNEO = 2
+    RANKING = 3
+
+# Enumeración para métodos de cruce
+class MetodoCruce(Enum):
+    UN_PUNTO = 1
+    DOS_PUNTOS = 2
+    UNIFORME = 3
+
+# Enumeración para métodos de mutación
+class MetodoMutacion(Enum):
+    BIT_FLIP = 1
+    INTERCAMBIO = 2
+    INVERSION = 3
+
+seleccion = input("Ingrese el tipo de selección 1.ruleta, 2.torneo, 3.ranking: ")
+cruce = input("Ingrese el tipo de cruce 1.un punto, 2.dos puntos, 3.uniforme: ")
+mutacion = input("Ingrese el tipo de mutación 1.bit flip, 2.intercambio, 3.inversión: ")
+
+operadores = {
+        'seleccion': seleccion,
+        'cruce': cruce,
+        'mutacion': mutacion
+    }
+
+poblacion = np.array(poblacionInicial)
+
+# Variables para almacenar estadísticas
+historico_fitness = []
+historico_factibles = []
+
+# Algoritmo genético principal
+for generacion in range(iteraciones):
+    # Evaluar población actual
+    fitness, total_fitness, factibles = evaluar_poblacion(poblacion, fenotipo, funcionFitnness, restriccion)
+    
+    # Guardar estadísticas
+    historico_fitness.append(total_fitness)
+    historico_factibles.append(sum(factibles))
+    
+    # Imprimir tabla detallada
+    imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
+    
+    # Crear nueva población
+    nueva_poblacion = []
+    
+    # Aplicar elitismo (los mejores pasan directamente)
+    if elitismo > 0:
+        mejores_indices = np.argsort(fitness)[-elitismo:]
+        for idx in mejores_indices:
+            nueva_poblacion.append(poblacion[idx].copy())
+    
+    # Completar la nueva población
+    while len(nueva_poblacion) < tamPoblacion:
+        # Selección (usando el método seleccionado para esta generación)
+        if operadores['seleccion'] == MetodoSeleccion.RULETA:
+            padre1 = seleccion_ruleta(fitness, total_fitness, poblacion)
+            padre2 = seleccion_ruleta(fitness, total_fitness, poblacion)
+        elif operadores['seleccion'] == MetodoSeleccion.TORNEO:
+            padre1 = seleccion_torneo(fitness, poblacion)
+            padre2 = seleccion_torneo(fitness, poblacion)
+        else:
+            padre1 = seleccion_ranking(fitness, poblacion)
+            padre2 = seleccion_ranking(fitness, poblacion)
+        
+        # Cruce (usando el método seleccionado para esta generación)
+        if random.random() < Pcruce:
+            if operadores['cruce'] == MetodoCruce.UN_PUNTO:
+                hijo1, hijo2 = cruce_un_punto(padre1, padre2)
+            elif operadores['cruce'] == MetodoCruce.DOS_PUNTOS:
+                hijo1, hijo2 = cruce_dos_puntos(padre1, padre2)
+            else:
+                hijo1, hijo2 = cruce_uniforme(padre1, padre2)
+        else:
+            hijo1, hijo2 = padre1.copy(), padre2.copy()
+        
+        # Mutación (usando el método seleccionado para esta generación)
+        if operadores['mutacion'] == MetodoMutacion.BIT_FLIP:
+            hijo1 = mutacion_bit_flip(hijo1)
+            hijo2 = mutacion_bit_flip(hijo2)
+        elif operadores['mutacion'] == MetodoMutacion.INTERCAMBIO:
+            hijo1 = mutacion_intercambio(hijo1)
+            hijo2 = mutacion_intercambio(hijo2)
+        else:
+            hijo1 = mutacion_inversion(hijo1)
+            hijo2 = mutacion_inversion(hijo2)
+        
+        # Agregar a la nueva población (sin exceder el tamaño)
+        if len(nueva_poblacion) < tamPoblacion:
+            nueva_poblacion.append(hijo1)
+        if len(nueva_poblacion) < tamPoblacion:
+            nueva_poblacion.append(hijo2)
+    
+    # Actualizar población
+    poblacion = np.array(nueva_poblacion)
