@@ -1,16 +1,16 @@
 import random 
 import  numpy as np
-from funciones import esFactible
+from funciones import *
 
 # Función de evaluación con penalización
-def evaluar_poblacion(poblacion, funcion):
+def evaluar_poblacion(poblacion, fenotipo, funcion, restriccion):
     fitness = np.zeros(len(poblacion))
     factibles = np.zeros(len(poblacion), dtype=bool)
     
     for i, ind in enumerate(poblacion):
-        factibles[i] = esFactible(ind)
+        factibles[i] = esFactible(ind, fenotipo, funcion, restriccion)
         if factibles[i]:
-            fitness[i] = np.sum(ind * funcion)
+            fitness[i] = resultadoFuncion(ind, fenotipo, funcion)
         else:
             fitness[i] = 0  # Penalización por muerte
     
