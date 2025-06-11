@@ -21,6 +21,7 @@ while continuar:
     print(poblacionInicial)
     continuar = (input("Desea continuar con la evolución? (s/n): ").lower()) != 's' 
 iteraciones = int(input("Ingrese el número de iteraciones: "))
+variablesDesicion = len(poblacionInicial[0])
 
 # Enumeración para métodos de selección
 class MetodoSeleccion(Enum):
@@ -93,24 +94,24 @@ for generacion in range(iteraciones):
         # Cruce (usando el método seleccionado para esta generación)
         if random.random() < Pcruce:
             if operadores['cruce'] == MetodoCruce.UN_PUNTO:
-                hijo1, hijo2 = cruce_un_punto(padre1, padre2)
+                hijo1, hijo2 = cruce_un_punto(padre1, padre2,  variablesDesicion)
             elif operadores['cruce'] == MetodoCruce.DOS_PUNTOS:
-                hijo1, hijo2 = cruce_dos_puntos(padre1, padre2)
+                hijo1, hijo2 = cruce_dos_puntos(padre1, padre2, variablesDesicion)
             else:
-                hijo1, hijo2 = cruce_uniforme(padre1, padre2)
+                hijo1, hijo2 = cruce_uniforme(padre1, padre2, variablesDesicion)
         else:
             hijo1, hijo2 = padre1.copy(), padre2.copy()
         
         # Mutación (usando el método seleccionado para esta generación)
         if operadores['mutacion'] == MetodoMutacion.BIT_FLIP:
-            hijo1 = mutacion_bit_flip(hijo1)
-            hijo2 = mutacion_bit_flip(hijo2)
+            hijo1 = mutacion_bit_flip(hijo1, Pmutacion)
+            hijo2 = mutacion_bit_flip(hijo2, Pmutacion)
         elif operadores['mutacion'] == MetodoMutacion.INTERCAMBIO:
             hijo1 = mutacion_intercambio(hijo1)
             hijo2 = mutacion_intercambio(hijo2)
         else:
-            hijo1 = mutacion_inversion(hijo1)
-            hijo2 = mutacion_inversion(hijo2)
+            hijo1 = mutacion_inversion(hijo1, variablesDesicion)
+            hijo2 = mutacion_inversion(hijo2, variablesDesicion)
         
         # Agregar a la nueva población (sin exceder el tamaño)
         if len(nueva_poblacion) < tamPoblacion:
