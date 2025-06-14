@@ -92,9 +92,9 @@ def ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restri
             individuo = [int(bit) for bit in individuo]
             if esFactible(individuo, fenotipo, funcionFitnness, restriccion):
                 poblacionInicial.append(individuo)
-                return poblacionInicial
             else:
                 print("El individuo no es factible según la restricción.")
+    return poblacionInicial
 
 # Función que verifica si los individuos de una población son iguales según un porcentaje de terminación.
 # La función compara cada individuo con los demás y cuenta cuántos son iguales.
@@ -107,4 +107,4 @@ def igualdad(poblacion, Pterminacion):
                 contador += 1
         if contador > mayor:
             mayor = contador
-    return mayor/len(poblacion) >= Pterminacion
+    return mayor/len(poblacion) < Pterminacion

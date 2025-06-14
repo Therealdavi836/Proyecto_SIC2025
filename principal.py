@@ -5,27 +5,31 @@ import matplotlib.pyplot as plt
 from tabulate import tabulate
 
 #Parametros
-Pcruce = int(input("Ingrese el numero de cruces: " )) / 100
+print("Bienvenido al Algoritmo Genético")
+print("Por favor, ingrese los parámetros del algoritmo:")
+print("Los valores deben ser enteros")
+Pcruce = int(input("Ingrese el porcentaje de cruce: ")) / 100
 Pmutacion = int(input("Ingrese el porcentaje de mutacion: ")) / 100
 Pterminacion = int(input("Ingrese el porcentaje de terminación: ")) / 100
 tamPoblacion = int(input("Ingrese el tamaño de la población: "))
+print("Los valores de las funciones deben ser en un formato 2x+3X o 4z+5z")
 funcionGlobal = funcionesAVectores(input("Ingrese la función global: "))
 funcionFitnness = funcionesAVectores(input("Ingrese la función fitness: "))
 restriccion = int(input("Ingrese la restricción: "))
 elitismo = 1
 respuesta = input("Desea crear una población inicial aleatoria? (s/n): ").lower()
-fenotipo = valoresMaxFenotipoBin(tamPoblacion)
+fenotipo = valoresMaxFenotipoBin(len(funcionGlobal))
 continuar = False
 if respuesta == 's':
     continuar = True
+else:
+    poblacionInicial = []
+    ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion)
 while continuar:
     poblacionInicial = generarPoblacionInicial(funcionFitnness, restriccion, tamPoblacion, fenotipo)
     #imprimir_tabla(poblacionInicial, funcionFitnness, funcionGlobal, restriccion, 0)
     print(poblacionInicial)
     continuar = (input("Desea continuar con la evolución? (s/n): ").lower()) != 's'
-else:
-    poblacionInicial = []
-    ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion)
 iteraciones = int(input("Ingrese el número de iteraciones: "))
 variablesDesicion = len(poblacionInicial[0])
 
@@ -76,7 +80,8 @@ while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     historico_factibles.append(sum(factibles))
     
     # Imprimir tabla detallada
-    imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
+    if generacion < 10 or generacion >= iteraciones - 10:
+        imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
     
     # Crear nueva población
     nueva_poblacion = []
@@ -129,6 +134,7 @@ while generacion < iteraciones and igualdad(poblacion, Pterminacion):
             nueva_poblacion.append(hijo2)
     generacion += 1
     # Actualizar población
+    historico_poblacion.append(nueva_poblacion.copy())
     poblacion = np.array(nueva_poblacion)
 
 # Gráficas de evolución
@@ -170,16 +176,17 @@ plt.tight_layout()
 plt.show()
 
 # Mostrar mejor solución encontrada
-fitness_final, _, factibles_final = evaluar_poblacion(poblacion)
-mejor_idx = np.argmax(fitness_final)
-mejor_individuo = poblacion[mejor_idx]
-mejor_fitness = fitness_final[mejor_idx]
-mejor_factible = factibles_final[mejor_idx]
-mejor_peso = np.sum(mejor_individuo * pesos)
+imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
+# fitness_final, _, factibles_final = evaluar_poblacion(poblacion)
+# mejor_idx = np.argmax(fitness_final)
+# mejor_individuo = poblacion[mejor_idx]
+# mejor_fitness = fitness_final[mejor_idx]
+# mejor_factible = factibles_final[mejor_idx]
+# mejor_peso = np.sum(mejor_individuo * funcionGlobal)
 
-print("\n--- Mejor Solución Encontrada ---")
-print(f"Cromosoma: {mejor_individuo.tolist()}")
-print(f"Fitness (Z): {mejor_fitness}")
-print(f"Factible: {'Sí' if mejor_factible else 'No'}")
-print(f"Peso total: {mejor_peso} (Límite: {capacidad_max})")
-print(f"Proyectos seleccionados: {[i+1 for i, gen in enumerate(mejor_individuo) if gen == 1]}")
+# print("\n--- Mejor Solución Encontrada ---")
+# print(f"Cromosoma: {mejor_individuo.tolist()}")
+# print(f"Fitness (Z): {mejor_fitness}")
+# print(f"Factible: {'Sí' if mejor_factible else 'No'}")
+# print(f"Peso total: {mejor_peso} (Límite: {restriccion})")
+# print(f"Proyectos seleccionados: {[i+1 for i, gen in enumerate(mejor_individuo) if gen == 1]}")
