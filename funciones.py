@@ -80,3 +80,18 @@ def esFactible(individuo, fenotipo, funcion, restriccion):
     Un individuo es factible si el resultado de la función es menor que la restricción.
     """
     return resultadoFuncion(individuo, fenotipo, funcion) < restriccion
+
+# Función que ingresa una población inicial de individuos.
+# La función solicita al usuario que ingrese los valores binarios de cada individuo.
+def ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion):
+    while len(poblacionInicial) < tamPoblacion:
+        individuo = input("Ingresa los valores binarios del individuo separados por espacios: ").split(" ")
+        if len(individuo) != np.sum(fenotipo):
+            print("El número de bits no coincide con el tamaño del fenotipo.")
+        else:
+            individuo = [int(bit) for bit in individuo]
+            if esFactible(individuo, fenotipo, funcionFitnness, restriccion):
+                poblacionInicial.append(individuo)
+                return poblacionInicial
+            else:
+                print("El individuo no es factible según la restricción.")

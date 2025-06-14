@@ -24,6 +24,7 @@ while continuar:
     continuar = (input("Desea continuar con la evolución? (s/n): ").lower()) != 's'
 else:
     poblacionInicial = []
+    ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion)
 iteraciones = int(input("Ingrese el número de iteraciones: "))
 variablesDesicion = len(poblacionInicial[0])
 
