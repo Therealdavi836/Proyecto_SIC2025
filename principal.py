@@ -7,6 +7,7 @@ from tabulate import tabulate
 #Parametros
 Pcruce = int(input("Ingrese el numero de cruces: " )) / 100
 Pmutacion = int(input("Ingrese el porcentaje de mutacion: ")) / 100
+Pterminacion = int(input("Ingrese el porcentaje de terminación: ")) / 100
 tamPoblacion = int(input("Ingrese el tamaño de la población: "))
 funcionGlobal = funcionesAVectores(input("Ingrese la función global: "))
 funcionFitnness = funcionesAVectores(input("Ingrese la función fitness: "))
@@ -61,9 +62,12 @@ poblacion = np.array(poblacionInicial)
 # Variables para almacenar estadísticas
 historico_fitness = []
 historico_factibles = []
+historico_poblacion = []
+
+generacion = 0
 
 # Algoritmo genético principal
-for generacion in range(iteraciones):
+while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     # Evaluar población actual
     fitness, total_fitness, factibles = evaluar_poblacion(poblacion, fenotipo, funcionFitnness, restriccion)
     
@@ -123,7 +127,7 @@ for generacion in range(iteraciones):
             nueva_poblacion.append(hijo1)
         if len(nueva_poblacion) < tamPoblacion:
             nueva_poblacion.append(hijo2)
-    
+    generacion += 1
     # Actualizar población
     poblacion = np.array(nueva_poblacion)
 
