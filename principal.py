@@ -7,17 +7,17 @@ from tabulate import tabulate
 #Parametros
 print("Bienvenido al Algoritmo Genético")
 print("Por favor, ingrese los parámetros del algoritmo:")
-print("Los valores deben ser enteros")
-Pcruce = int(input("Ingrese el porcentaje de cruce: ")) / 100
-Pmutacion = int(input("Ingrese el porcentaje de mutacion: ")) / 100
-Pterminacion = int(input("Ingrese el porcentaje de terminación: ")) / 100
-tamPoblacion = int(input("Ingrese el tamaño de la población: "))
+print("Los valores deben ser enteros")   
+Pcruce = validar_porcentaje(input("Ingrese el porcentaje de cruce: "), "cruce")
+Pmutacion = validar_porcentaje(input("Ingrese el porcentaje de mutacion: "), "mutación")
+Pterminacion = validar_porcentaje(input("Ingrese el porcentaje de terminación: "), "terminación")
+tamPoblacion = validar_tamano_poblacion(input("Ingrese el tamaño de la población: "))       
 print("Los valores de las funciones deben ser en un formato 2x+3X o 4z+5z")
-funcionGlobal = funcionesAVectores(input("Ingrese la función global: "))
-funcionFitnness = funcionesAVectores(input("Ingrese la función fitness: "))
-restriccion = int(input("Ingrese la restricción: "))
-elitismo = 1
-respuesta = input("Desea crear una población inicial aleatoria? (s/n): ").lower()
+funcionGlobal = funcionesAVectores(validar_funcion(input("Ingrese la función global: ")))
+funcionFitnness = funcionesAVectores(validar_funcion(input("Ingrese la función fitness: ")))     
+restriccion = validar_restriccion(input("Ingrese la restricción: "))
+elitismo = 1   
+respuesta = validar_opcion(input("Desea crear una población inicial aleatoria? (s/n): ").lower())
 fenotipo = valoresMaxFenotipoBin(len(funcionGlobal))
 continuar = False
 if respuesta == 's':
@@ -31,6 +31,8 @@ while continuar:
     print(poblacionInicial)
     continuar = (input("Desea continuar con la evolución? (s/n): ").lower()) != 's'
 iteraciones = int(input("Ingrese el número de iteraciones: "))
+if iteraciones <= 0:
+    print("El número de iteraciones debe ser mayor que 0")
 variablesDesicion = len(poblacionInicial[0])
 
 # Enumeración para métodos de selección
@@ -51,10 +53,25 @@ class MetodoMutacion(Enum):
     INTERCAMBIO = 2
     INVERSION = 3
 
-seleccion = input("Ingrese el tipo de selección 1.ruleta, 2.torneo, 3.ranking: ")
-cruce = input("Ingrese el tipo de cruce 1.un punto, 2.dos puntos, 3.uniforme: ")
-mutacion = input("Ingrese el tipo de mutación 1.bit flip, 2.intercambio, 3.inversión: ")
-
+ # Validación de operadores
+seleccion = validar_opcion_operador(
+    input("Ingrese el tipo de selección 1.ruleta, 2.torneo, 3.ranking: "),
+    "selección",
+    [1, 2, 3]
+    )
+        
+cruce = validar_opcion_operador(
+    input("Ingrese el tipo de cruce 1.un punto, 2.dos puntos, 3.uniforme: "),
+    "cruce",
+    [1, 2, 3]
+    )
+        
+mutacion = validar_opcion_operador(
+    input("Ingrese el tipo de mutación 1.bit flip, 2.intercambio, 3.inversión: "),
+    "mutación",
+    [1, 2, 3]
+    )
+        
 operadores = {
         'seleccion': seleccion,
         'cruce': cruce,

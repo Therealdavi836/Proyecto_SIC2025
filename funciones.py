@@ -21,7 +21,7 @@ def funcionesAVectores(funcion):
 def valoresMaxFenotipoBin(tamFuncion):
     valores = []
     for i in range(tamFuncion):
-        print("Ingresa la cantidad de valores de decisión maxima para el fenotipo ", i, ":")
+        print("Ingresa la cantidad de valores de decisión maxima para el fenotipo (por cada variable son 4 bits) ", i, ":")
         valor = (int(input())).bit_length()
         valores.append(valor)
     return valores
@@ -108,3 +108,100 @@ def igualdad(poblacion, Pterminacion):
         if contador > mayor:
             mayor = contador
     return mayor/len(poblacion) < Pterminacion
+
+# Funciones de excepción para manejar errores específicos en la entrada de datos.
+# agregamos clases de excepción personalizadas para manejar errores comunes en la entrada de datos.
+
+class EntradaInvalidaError(Exception):
+    """Excepción base para entradas inválidas"""
+    pass
+
+class ValorNoEnteroError(EntradaInvalidaError):
+    """Se lanza cuando se espera un entero pero se recibe otro tipo de dato"""
+    def __init__(self, campo):
+        super().__init__(f"El valor para {campo} debe ser un número entero")
+
+class PorcentajeInvalidoError(EntradaInvalidaError):
+    """Se lanza cuando un porcentaje está fuera del rango 0-100"""
+    def __init__(self, campo):
+        super().__init__(f"El porcentaje para {campo} debe estar entre 0 y 100")
+
+class FormatoFuncionInvalidoError(EntradaInvalidaError):
+    """Se lanza cuando el formato de la función no es válido"""
+    def __init__(self):
+        super().__init__("El formato de la función debe ser similar a '2x+3X' o '4z+5z'")
+
+class OpcionInvalidaError(EntradaInvalidaError):
+    """Se lanza cuando se ingresa una opción no válida (s/n)"""
+    def __init__(self):
+        super().__init__("La opción debe ser 's' o 'n'")
+
+class TamañoPoblacionInvalidoError(EntradaInvalidaError):
+    """Se lanza cuando el tamaño de población es menor a 1"""
+    def __init__(self):
+        super().__init__("El tamaño de la población debe ser al menos 1")
+
+class RestriccionInvalidaError(EntradaInvalidaError):
+    """Se lanza cuando la restricción no es un número válido"""
+    def __init__(self):
+        super().__init__("La restricción debe ser un número entero válido")
+
+# Agregar esta nueva excepción al archivo existente
+class OpcionOperadorInvalidaError(EntradaInvalidaError):
+    """Se lanza cuando se ingresa una opción no válida para los operadores"""
+    def __init__(self, operador, opciones_validas):
+        super().__init__(f"Opción inválida para {operador}. Las opciones válidas son: {opciones_validas}")
+
+# Funciones de validación para asegurar que los datos ingresados por el usuario sean correctos.
+def validar_entero(valor, campo):
+    """Valida que el valor sea un entero"""
+    try:
+        return int(valor)
+    except ValueError:
+        raise ValorNoEnteroError(campo)
+
+def validar_porcentaje(valor, campo):
+    """Valida que el valor sea un porcentaje entre 0 y 100"""
+    valor = validar_entero(valor, campo)
+    if valor < 0 or valor > 100:
+        raise PorcentajeInvalidoError(campo)
+    return valor / 100
+
+def validar_tamano_poblacion(valor):
+    """Valida el tamaño de la población"""
+    valor = validar_entero(valor, "tamaño de población")
+    if valor < 1:
+        raise TamañoPoblacionInvalidoError()
+    return valor
+
+def validar_funcion(funcion_str):
+    """Valida el formato básico de la función (implementación básica)"""
+    # Esta es una validación sencilla, se puede expandir según requerimientos
+    if not any(c in funcion_str for c in ['x', 'X', 'y', 'Y', 'z', 'Z']):
+        raise FormatoFuncionInvalidoError()
+    return funcion_str
+
+def validar_opcion(opcion):
+    """Valida que la opción sea s/n"""
+    opcion = opcion.lower()
+    if opcion not in ['s', 'n']:
+        raise OpcionInvalidaError()
+    return opcion
+
+def validar_restriccion(valor):
+    """Valida la restricción"""
+    try:
+        return int(valor)
+    except ValueError:
+        raise RestriccionInvalidaError()
+
+# Función para validar la opción del operador (selección, cruce, mutación).
+def validar_opcion_operador(valor, operador, opciones_validas):
+    """Valida que la opción del operador sea válida"""
+    try:
+        valor_int = int(valor)
+        if valor_int not in opciones_validas:
+            raise OpcionOperadorInvalidaError(operador, opciones_validas)
+        return valor_int
+    except ValueError:
+        raise OpcionOperadorInvalidaError(operador, opciones_validas)
