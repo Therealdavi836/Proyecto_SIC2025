@@ -13,21 +13,21 @@ Pmutacion = validar_porcentaje(input("Ingrese el porcentaje de mutacion: "), "mu
 Pterminacion = validar_porcentaje(input("Ingrese el porcentaje de terminación: "), "terminación")
 tamPoblacion = validar_tamano_poblacion(input("Ingrese el tamaño de la población: "))       
 print("Los valores de las funciones deben ser en un formato 2x+3X o 4z+5z")
-funcionGlobal = funcionesAVectores(validar_funcion(input("Ingrese la función global: ")))
-funcionFitnness = funcionesAVectores(validar_funcion(input("Ingrese la función fitness: ")))     
+funcionFitnness = funcionesAVectores(validar_funcion(input("Ingrese la función global: ")))
+funcionPesos = funcionesAVectores(validar_funcion(input("Ingrese la función fitness: ")))     
 restriccion = validar_restriccion(input("Ingrese la restricción: "))
 elitismo = 1   
 respuesta = validar_opcion(input("Desea crear una población inicial aleatoria? (s/n): ").lower())
-fenotipo = valoresMaxFenotipoBin(len(funcionGlobal))
+fenotipo = valoresMaxFenotipoBin(len(funcionFitnness))
 continuar = False
 if respuesta == 's':
     continuar = True
 else:
     poblacionInicial = []
-    ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion)
+    ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionPesos, restriccion, tamPoblacion)
 while continuar:
-    poblacionInicial = generarPoblacionInicial(funcionFitnness, restriccion, tamPoblacion, fenotipo)
-    #imprimir_tabla(poblacionInicial, funcionFitnness, funcionGlobal, restriccion, 0)
+    poblacionInicial = generarPoblacionInicial(funcionPesos, restriccion, tamPoblacion, fenotipo)
+    #imprimir_tabla(poblacionInicial, funcionPesos, funcionFitnness, restriccion, 0)
     print(poblacionInicial)
     continuar = (input("Desea continuar con la evolución? (s/n): ").lower()) != 's'
 iteraciones = int(input("Ingrese el número de iteraciones: "))
@@ -84,18 +84,19 @@ poblacion = np.array(poblacionInicial)
 historico_fitness = []
 historico_factibles = []
 historico_poblacion = []
+historico_pesos = []
 
 generacion = 0
 
 # Algoritmo genético principal
 while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     # Evaluar población actual
-    fitness, total_fitness, factibles = evaluar_poblacion(poblacion, fenotipo, funcionFitnness, restriccion)
+    fitness, total_fitness, factibles = evaluar_poblacion(poblacion, fenotipo, funcionPesos, restriccion)
     
     # Guardar estadísticas
     historico_fitness.append(total_fitness)
     historico_factibles.append(sum(factibles))
-    
+    historico_pesos.append(funsionPesos(poblacion, funcionPesos, fenotipo))
     # Imprimir tabla detallada
     if generacion < 10 or generacion >= iteraciones - 10:
         imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
@@ -154,6 +155,8 @@ while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     historico_poblacion.append(nueva_poblacion.copy())
     poblacion = np.array(nueva_poblacion)
 
+imprimir_tabla_mejores_individuos(historico_poblacion, historico_pesos, funcionFitnness, generacion)
+
 # Gráficas de evolución
 plt.figure(figsize=(15, 5))
 
@@ -199,7 +202,7 @@ imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
 # mejor_individuo = poblacion[mejor_idx]
 # mejor_fitness = fitness_final[mejor_idx]
 # mejor_factible = factibles_final[mejor_idx]
-# mejor_peso = np.sum(mejor_individuo * funcionGlobal)
+# mejor_peso = np.sum(mejor_individuo * funcionFitnness)
 
 # print("\n--- Mejor Solución Encontrada ---")
 # print(f"Cromosoma: {mejor_individuo.tolist()}")

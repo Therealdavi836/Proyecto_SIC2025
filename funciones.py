@@ -109,6 +109,22 @@ def igualdad(poblacion, Pterminacion):
             mayor = contador
     return mayor/len(poblacion) < Pterminacion
 
+def funsionPesos(poblacion, funsion, fenotipo):
+    """Calcula los pesos de cada individuo en la población según la función."""
+    pesos = []
+    for individuo in poblacion:
+        peso = resultadoFuncion(individuo, funsion, fenotipo)
+        pesos.append(peso)
+    return np.array(pesos)
+
+def mayor(fitness):
+    """Encuentra el índice del individuo con el mayor fitness."""
+    mayor = 0
+    for i in range(len(fitness)):
+        if fitness[i] > fitness[mayor]:
+            mayor = i
+    return mayor
+
 # Funciones de excepción para manejar errores específicos en la entrada de datos.
 # agregamos clases de excepción personalizadas para manejar errores comunes en la entrada de datos.
 
