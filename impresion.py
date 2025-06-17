@@ -25,7 +25,7 @@ def imprimir_tabla(poblacion, fitness, factibles, pesos, iteracion, operadores=N
         ])
 
 #Funsion imprimir tabal de mejores individuos
-def imprimir_tabla_mejores_individuos(totalpoblacion, totalfitness, totalpesos, iteracion,):
+def imprimir_tabla_mejores_individuos(totalpoblacion, totalpesos, totalfitness, iteracion,):
     
     headers = ["Individuo", "Cromosoma", "Z (Fitness)", "Costo Mejor individuo", "Probabilidad", "Prob. Acumulada"]
     tabla = []

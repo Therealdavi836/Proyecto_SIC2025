@@ -154,8 +154,9 @@ while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     # Actualizar población
     historico_poblacion.append(nueva_poblacion.copy())
     poblacion = np.array(nueva_poblacion)
+    historico_pesos.append(funsionPesos(poblacion, funcionPesos, fenotipo))
 
-imprimir_tabla_mejores_individuos(historico_poblacion, historico_pesos, funcionFitnness, generacion)
+imprimir_tabla_mejores_individuos(historico_poblacion, historico_pesos, historico_fitness, generacion)
 
 # Gráficas de evolución
 plt.figure(figsize=(15, 5))
