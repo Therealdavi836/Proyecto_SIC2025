@@ -46,6 +46,50 @@ def mostrar_frame():
         frame_no.pack(fill="both", expand=True)
         frame_si.pack_forget()
 
+def mostrar_calculadora(label_tipo):
+    global seccion_calculadora, funcion_activa
+
+    # Cierra sección previa si existe
+    if seccion_calculadora:
+        seccion_calculadora.destroy()
+
+    funcion_activa = label_tipo  # "objetivo" o "restriccion"
+    seccion_calculadora = tk.Frame(frame_funciones, bg="#eef")
+    seccion_calculadora.grid(row=2 if label_tipo == "objetivo" else 3, column=1, pady=5, sticky="w")
+
+    tk.Label(seccion_calculadora, text="Editor de Función", bg="#eef").pack(pady=(5, 0))
+
+    entry_funcion = tk.Entry(seccion_calculadora, width=50)
+    entry_funcion.pack(pady=5)
+
+    # Prellenar el campo con el valor actual
+    if funcion_activa == "objetivo":
+        entry_funcion.insert(0, funcion_objetivo_str.get())
+    elif funcion_activa == "restriccion":
+        entry_funcion.insert(0, funcion_restriccion_str.get())
+
+    botones_frame = tk.Frame(seccion_calculadora, bg="#eef")
+    botones_frame.pack()
+
+    def guardar_funcion():
+        texto = entry_funcion.get().strip()
+        if funcion_activa == "objetivo":
+            funcion_objetivo_str.set(texto)
+        elif funcion_activa == "restriccion":
+            funcion_restriccion_str.set(texto)
+        seccion_calculadora.destroy()
+
+    def cancelar():
+        seccion_calculadora.destroy()
+
+    tk.Button(botones_frame, text="Guardar", command=guardar_funcion, bg="#4CAF50", fg="white").pack(side="left", padx=5)
+    tk.Button(botones_frame, text="Cancelar", command=cancelar, bg="#f44336", fg="white").pack(side="left", padx=5)
+
+# Variables globales necesarias
+seccion_calculadora = None
+funcion_activa = None
+
+
 root = tk.Tk()
 root.title("Algoritmo Genético - Interfaz Gráfica")
 root.geometry("1200x700")
@@ -95,13 +139,19 @@ metodo_mutacion.current(0)
 frame_funciones = tk.LabelFrame(frame_izquierda, text="🧮 Funciones del Problema", padx=10, pady=10)
 frame_funciones.pack(fill="x", pady=5)
 
+funcion_objetivo_str = tk.StringVar(value="")
+funcion_restriccion_str = tk.StringVar(value="")
+
 tk.Label(frame_funciones, text="Función Objetivo:").grid(row=0, column=0, sticky="nw")
-entrada_funcion_objetivo = tk.Text(frame_funciones, height=2, width=60)
-entrada_funcion_objetivo.grid(row=0, column=1, pady=5)
+entrada_funcion_objetivo = tk.Label(frame_funciones, textvariable=funcion_objetivo_str, anchor="w", bg="white", relief="solid", width=60, height=1, justify="left")
+entrada_funcion_objetivo.grid(row=0, column=1, pady=5, sticky="w")
+tk.Button(frame_funciones, text="✏️ Editar", command=lambda: mostrar_calculadora("objetivo")).grid(row=0, column=2, padx=5)
 
 tk.Label(frame_funciones, text="Función de Restricción:").grid(row=1, column=0, sticky="nw")
-entrada_funcion_restriccion = tk.Text(frame_funciones, height=2, width=60)
-entrada_funcion_restriccion.grid(row=1, column=1, pady=5)
+
+entrada_funcion_restriccion = tk.Label(frame_funciones, textvariable=funcion_restriccion_str, anchor="w", bg="white", relief="solid", width=60, height=1, justify="left")
+entrada_funcion_restriccion.grid(row=1, column=1, pady=5, sticky="w")
+tk.Button(frame_funciones, text="✏️ Editar", command=lambda: mostrar_calculadora("restriccion")).grid(row=1, column=2, padx=5)
 
 # ===== POBLACIÓN INICIAL =====
 opcion = tk.StringVar(value="s")
