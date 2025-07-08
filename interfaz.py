@@ -49,27 +49,42 @@ def mostrar_frame():
 def mostrar_calculadora(label_tipo):
     global seccion_calculadora, funcion_activa
 
-    # Cierra sección previa si existe
     if seccion_calculadora:
         seccion_calculadora.destroy()
 
-    funcion_activa = label_tipo  # "objetivo" o "restriccion"
+    funcion_activa = label_tipo
     seccion_calculadora = tk.Frame(frame_funciones, bg="#eef")
-    seccion_calculadora.grid(row=2 if label_tipo == "objetivo" else 3, column=1, pady=5, sticky="w")
+    seccion_calculadora.grid(row=2 if label_tipo == "objetivo" else 3, column=1, columnspan=2, pady=5, sticky="w")
 
     tk.Label(seccion_calculadora, text="Editor de Función", bg="#eef").pack(pady=(5, 0))
 
-    entry_funcion = tk.Entry(seccion_calculadora, width=50)
+    entry_funcion = tk.Entry(seccion_calculadora, width=60)
     entry_funcion.pack(pady=5)
 
-    # Prellenar el campo con el valor actual
     if funcion_activa == "objetivo":
         entry_funcion.insert(0, funcion_objetivo_str.get())
     elif funcion_activa == "restriccion":
         entry_funcion.insert(0, funcion_restriccion_str.get())
 
+    def insertar(texto):
+        entry_funcion.insert(tk.END, texto)
+
+    botones = [
+        ("+", "+"), ("-", "-"), ("×", "*"), ("÷", "/"),
+        ("x²", "^2"), ("x^y", "^"), ("√", "sqrt("),("ⁿ√", "root("), 
+        ("log", "log("), ("π", "pi"), ("e", "e"), ("(", "("), 
+        (")", ")"), ("sin", "sin("), ("cos", "cos("), ("tan", "tan("),
+        ("cot", "cot("), ("csc", "csc("), ("sec", "sec(")
+    ]
+
     botones_frame = tk.Frame(seccion_calculadora, bg="#eef")
     botones_frame.pack()
+
+    for i, (texto, valor) in enumerate(botones):
+        tk.Button(botones_frame, text=texto, width=5, command=lambda v=valor: insertar(v)).grid(row=i//6, column=i%6, padx=2, pady=2)
+
+    acciones_frame = tk.Frame(seccion_calculadora, bg="#eef")
+    acciones_frame.pack(pady=5)
 
     def guardar_funcion():
         texto = entry_funcion.get().strip()
@@ -82,8 +97,9 @@ def mostrar_calculadora(label_tipo):
     def cancelar():
         seccion_calculadora.destroy()
 
-    tk.Button(botones_frame, text="Guardar", command=guardar_funcion, bg="#4CAF50", fg="white").pack(side="left", padx=5)
-    tk.Button(botones_frame, text="Cancelar", command=cancelar, bg="#f44336", fg="white").pack(side="left", padx=5)
+    tk.Button(acciones_frame, text="Guardar", command=guardar_funcion, bg="#4CAF50", fg="white").pack(side="left", padx=5)
+    tk.Button(acciones_frame, text="Cancelar", command=cancelar, bg="#f44336", fg="white").pack(side="left", padx=5)
+
 
 # Variables globales necesarias
 seccion_calculadora = None
