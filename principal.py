@@ -96,7 +96,7 @@ while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     # Guardar estadísticas
     historico_fitness.append(total_fitness)
     historico_factibles.append(sum(factibles))
-    historico_pesos.append(funsionPesos(poblacion, funcionPesos, fenotipo))
+    historico_pesos.append(funcionPesos(poblacion, funcionPesos, fenotipo))
     # Imprimir tabla detallada
     if generacion < 10 or generacion >= iteraciones - 10:
         imprimir_tabla(poblacion, fitness, factibles, generacion, operadores)
@@ -154,7 +154,7 @@ while generacion < iteraciones and igualdad(poblacion, Pterminacion):
     # Actualizar población
     historico_poblacion.append(nueva_poblacion.copy())
     poblacion = np.array(nueva_poblacion)
-    historico_pesos.append(funsionPesos(poblacion, funcionPesos, fenotipo))
+    historico_pesos.append(funcionPesos(poblacion, funcionPesos, fenotipo))
 
 imprimir_tabla_mejores_individuos(historico_poblacion, historico_pesos, historico_fitness, generacion)
 

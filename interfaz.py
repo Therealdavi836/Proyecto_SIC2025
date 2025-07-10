@@ -1,42 +1,175 @@
 import tkinter as tk
+import random
+import threading
+import time
 from tkinter import ttk, messagebox, filedialog
+from funciones import funcionesAVectores, generarPoblacionInicial, esFactible, resultadoFuncion, listaDecimales, parsear_restriccion
+from metodos import evaluar_poblacion, seleccion_ruleta, seleccion_torneo, seleccion_ranking
+from metodos import cruce_un_punto, cruce_dos_puntos, cruce_uniforme
+from metodos import mutacion_bit_flip, mutacion_intercambio, mutacion_inversion
 
+# Variables globales necesarias
+seccion_calculadora = None
+funcion_activa = None
+
+def ejecutar_algoritmo_en_hilo():
+    hilo = threading.Thread(target=ejecutar_algoritmo)
+    hilo.start()
+
+def imprimir_y_guardar(texto):
+    resultados_text.insert("end", texto)
+    resultados_text.see("end")
+    global historial_resultados
+    historial_resultados += texto
+
+# Funciones de control de interfaz
 def ejecutar_algoritmo():
+    global historial_resultados
+    historial_resultados = "🧬 Ejecutando algoritmo genético...\n"
     try:
+        # 1. Obtener parámetros desde la GUI
         parametros = {
-            "cruce": float(entrada_cruce.get()),
-            "mutacion": float(entrada_mutacion.get()),
+            "cruce": float(entrada_cruce.get()) / 100,
+            "mutacion": float(entrada_mutacion.get()) / 100,
             "poblacion": int(entrada_tam_poblacion.get()),
             "generaciones": int(entrada_generaciones.get()),
             "elitismo": int(entrada_elitismo.get()),
             "seleccion": metodo_seleccion.get(),
             "cruce_tipo": metodo_cruce.get(),
             "mutacion_tipo": metodo_mutacion.get(),
-            "objetivo": entrada_funcion_objetivo.get("1.0", "end").strip(),
-            "restriccion": entrada_funcion_restriccion.get("1.0", "end").strip(),
+            "objetivo": funcion_objetivo_str.get().strip(),
+            "restriccion": funcion_restriccion_str.get().strip(),
             "modo_poblacion": opcion.get()
         }
 
-        resultados_text.insert("end", "🧬 Ejecutando algoritmo genético...\n")
-        resultados_text.insert("end", f"Parámetros: {parametros}\n")
-        resultados_text.insert("end", "✅ Listo para integrar con backend.\n\n")
+        # 2. Parsear funciones
+        coef_funcion = funcionesAVectores(parametros["objetivo"])
+        coef_restriccion, limite_restriccion = parsear_restriccion(parametros["restriccion"])
+        tam_fenotipo = len(coef_funcion)
+        bits_por_variable = 4
+        fenotipo = [bits_por_variable] * tam_fenotipo
 
-    except ValueError:
-        messagebox.showerror("Error", "Por favor, completa todos los campos numéricos correctamente.")
+        # 3. Preparar la interfaz
+        resultados_text.delete("1.0", "end")
+        imprimir_y_guardar("🧬 Ejecutando algoritmo genético...\n")
+        root.update_idletasks()
+
+        # 4. Inicializar población
+        poblacion = generarPoblacionInicial(coef_funcion, limite_restriccion, parametros["poblacion"], fenotipo)
+
+        # 5. Evolución
+        for generacion in range(parametros["generaciones"]):
+            nueva_poblacion = []
+
+            fitness = [
+                resultadoFuncion(ind, fenotipo, coef_funcion)
+                if esFactible(ind, fenotipo, coef_restriccion, limite_restriccion) else 0
+                for ind in poblacion
+            ]
+
+            elite = sorted(zip(poblacion, fitness), key=lambda x: x[1], reverse=True)[:parametros["elitismo"]]
+            nueva_poblacion.extend([ind for ind, _ in elite])
+
+            while len(nueva_poblacion) < parametros["poblacion"]:
+                # Selección
+                if parametros["seleccion"] == "Ruleta":
+                    padre1 = seleccion_ruleta(fitness, sum(fitness), poblacion)
+                    padre2 = seleccion_ruleta(fitness, sum(fitness), poblacion)
+                elif parametros["seleccion"] == "Torneo":
+                    padre1 = seleccion_torneo(fitness, poblacion)
+                    padre2 = seleccion_torneo(fitness, poblacion)
+                else:  # Ranking
+                    padre1 = seleccion_ranking(fitness, poblacion)
+                    padre2 = seleccion_ranking(fitness, poblacion)
+
+                # Cruce
+                if random.random() < parametros["cruce"]:
+                    if parametros["cruce_tipo"] == "Un punto":
+                        hijo1, hijo2 = cruce_un_punto(padre1, padre2, sum(fenotipo))
+                    elif parametros["cruce_tipo"] == "Dos puntos":
+                        hijo1, hijo2 = cruce_dos_puntos(padre1, padre2, sum(fenotipo))
+                    else:
+                        hijo1, hijo2 = cruce_uniforme(padre1, padre2, sum(fenotipo))
+                else:
+                    hijo1, hijo2 = padre1, padre2
+
+                # Mutación
+                if parametros["mutacion_tipo"] == "Bit flip":
+                    hijo1 = mutacion_bit_flip(hijo1, parametros["mutacion"])
+                    hijo2 = mutacion_bit_flip(hijo2, parametros["mutacion"])
+                elif parametros["mutacion_tipo"] == "Intercambio":
+                    hijo1 = mutacion_intercambio(hijo1)
+                    hijo2 = mutacion_intercambio(hijo2)
+                else:
+                    hijo1 = mutacion_inversion(hijo1, sum(fenotipo) - 1)
+                    hijo2 = mutacion_inversion(hijo2, sum(fenotipo) - 1)
+
+                # Validar factibilidad
+                if esFactible(hijo1, fenotipo, coef_restriccion, limite_restriccion):
+                    nueva_poblacion.append(hijo1)
+                if len(nueva_poblacion) < parametros["poblacion"] and esFactible(hijo2, fenotipo, coef_restriccion, limite_restriccion):
+                    nueva_poblacion.append(hijo2)
+
+            poblacion = nueva_poblacion
+            
+            imprimir_y_guardar(f"Generación {generacion + 1} completada...\n")
+            resultados_text.see("end")  # Auto-scroll
+            
+            time.sleep(0.05)  # Un poco más perceptible
+
+        # 6. Mostrar resultado final
+
+        imprimir_y_guardar("\n📋 Tabla de individuos:\n")
+        imprimir_y_guardar("N° | Cromosoma binario                 | Fenotipo       | Obj. | Factible\n")
+        imprimir_y_guardar("-"*70 + "\n")
+
+        for i, ind in enumerate(poblacion):
+            cromosoma = "".join(str(bit) for bit in ind)
+            fenotipo_vals = [int(z) for z in listaDecimales(ind, fenotipo)]
+            obj = resultadoFuncion(ind, fenotipo, coef_funcion)
+            factible = esFactible(ind, fenotipo, coef_restriccion, limite_restriccion)
+            imprimir_y_guardar(f"{i+1:2d} | {cromosoma:28} | {fenotipo_vals} | {obj:5} | {'✔' if factible else '❌'}\n")
+
+        mejores = sorted(poblacion, key=lambda ind: resultadoFuncion(ind, fenotipo, coef_funcion), reverse=True)
+        mejor = mejores[0]
+        resultado = resultadoFuncion(mejor, fenotipo, coef_funcion)
+        valores = [int(v) for v in listaDecimales(mejor, fenotipo)]
+
+        imprimir_y_guardar("\n🎯 Mejor solución encontrada:\n")
+        imprimir_y_guardar(f"🧬 Cromosoma: {mejor.tolist()}\n")
+        imprimir_y_guardar(f"🔢 Fenotipo decodificado: {valores}\n")
+
+        expresion = " + ".join(f"{coef}*X{i+1}" for i, coef in enumerate(coef_funcion))
+        valores_str = " + ".join(f"{coef_funcion[i]}*{valores[i]}" for i in range(len(coef_funcion)))
+        imprimir_y_guardar(f"🧮 Función objetivo: {expresion} = {valores_str} = {resultado}\n")
+
+        # Evaluar restricción
+        restriccion_expr = " + ".join(f"{coef_restriccion[i]}*{valores[i]}" for i in range(len(valores)))
+        restriccion_valor = sum(coef_restriccion[i] * valores[i] for i in range(len(valores)))
+
+        cumple = "✔ Cumple restricción" if restriccion_valor <= limite_restriccion else "❌ No cumple restricción"
+        imprimir_y_guardar(f"📏 Restricción: {restriccion_expr} = {restriccion_valor} {'<= ' + str(limite_restriccion)} → {cumple}\n")
+        historial_resultados 
+
+    except Exception as e:
+        messagebox.showerror("Error", f"Error en entrada o ejecución: {str(e)}")
 
 def limpiar_campos():
     for entrada in [entrada_cruce, entrada_mutacion, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo]:
         entrada.delete(0, 'end')
-    entrada_funcion_objetivo.delete("1.0", "end")
-    entrada_funcion_restriccion.delete("1.0", "end")
+    funcion_objetivo_str.set("")
+    funcion_restriccion_str.set("")
     resultados_text.delete("1.0", "end")
 
 def guardar_csv():
     ruta = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV files", "*.csv")])
     if ruta:
-        with open(ruta, "w") as f:
-            f.write(resultados_text.get("1.0", "end"))
-        messagebox.showinfo("Guardado", f"Resultados guardados en:\n{ruta}")
+        try:
+            with open(ruta, "w", encoding="utf-8") as f:
+                f.write(historial_resultados)
+            messagebox.showinfo("Guardado", f"Resultados guardados en:\n{ruta}")
+        except Exception as e:
+            messagebox.showerror("Error", f"No se pudo guardar el archivo:\n{e}")
 
 def mostrar_frame():
     if opcion.get() == "s":
@@ -71,7 +204,7 @@ def mostrar_calculadora(label_tipo):
 
     botones = [
         ("+", "+"), ("-", "-"), ("×", "*"), ("÷", "/"),
-        ("x²", "^2"), ("x^y", "^"), ("√", "sqrt("),("ⁿ√", "root("), 
+        ("x²", "^2"), ("x^y", "^"), ("√", "sqrt("), ("ⁿ√", "root("), 
         ("log", "log("), ("π", "pi"), ("e", "e"), ("(", "("), 
         (")", ")"), ("sin", "sin("), ("cos", "cos("), ("tan", "tan("),
         ("cot", "cot("), ("csc", "csc("), ("sec", "sec(")
@@ -100,24 +233,18 @@ def mostrar_calculadora(label_tipo):
     tk.Button(acciones_frame, text="Guardar", command=guardar_funcion, bg="#4CAF50", fg="white").pack(side="left", padx=5)
     tk.Button(acciones_frame, text="Cancelar", command=cancelar, bg="#f44336", fg="white").pack(side="left", padx=5)
 
-
-# Variables globales necesarias
-seccion_calculadora = None
-funcion_activa = None
-
-
+# === GUI PRINCIPAL ===
 root = tk.Tk()
 root.title("Algoritmo Genético - Interfaz Gráfica")
-root.geometry("1200x700")
+root.geometry("1365x733")
 
-# ==== Layout principal en dos columnas ====
 frame_izquierda = tk.Frame(root)
 frame_izquierda.pack(side="left", fill="both", expand=True, padx=10, pady=10)
 
 frame_derecha = tk.Frame(root)
 frame_derecha.pack(side="right", fill="y", padx=10, pady=10)
 
-# ===== PARÁMETROS NUMÉRICOS =====
+# === PARÁMETROS ===
 frame_parametros = tk.LabelFrame(frame_izquierda, text="⚙️ Parámetros Numéricos", padx=10, pady=10)
 frame_parametros.pack(fill="x", pady=5)
 
@@ -132,44 +259,45 @@ for i, texto in enumerate(labels):
 
 entrada_cruce, entrada_mutacion, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo = entradas
 
-# ===== MÉTODOS GENÉTICOS =====
+# === MÉTODOS ===
 frame_metodos = tk.LabelFrame(frame_izquierda, text="🧬 Operadores Genéticos", padx=10, pady=10)
 frame_metodos.pack(fill="x", pady=5)
 
-tk.Label(frame_metodos, text="Método de Selección:").grid(row=0, column=0, sticky="w")
 metodo_seleccion = ttk.Combobox(frame_metodos, values=["Ruleta", "Torneo", "Ranking"], state="readonly")
+metodo_cruce = ttk.Combobox(frame_metodos, values=["Un punto", "Dos puntos", "Uniforme"], state="readonly")
+metodo_mutacion = ttk.Combobox(frame_metodos, values=["Bit flip", "Intercambio", "Inversión"], state="readonly")
+
+tk.Label(frame_metodos, text="Método de Selección:").grid(row=0, column=0, sticky="w")
 metodo_seleccion.grid(row=0, column=1, pady=5)
 metodo_seleccion.current(0)
 
 tk.Label(frame_metodos, text="Método de Cruce:").grid(row=1, column=0, sticky="w")
-metodo_cruce = ttk.Combobox(frame_metodos, values=["Un punto", "Dos puntos", "Uniforme"], state="readonly")
 metodo_cruce.grid(row=1, column=1, pady=5)
 metodo_cruce.current(0)
 
 tk.Label(frame_metodos, text="Método de Mutación:").grid(row=2, column=0, sticky="w")
-metodo_mutacion = ttk.Combobox(frame_metodos, values=["Bit flip", "Intercambio", "Inversión"], state="readonly")
 metodo_mutacion.grid(row=2, column=1, pady=5)
 metodo_mutacion.current(0)
 
-# ===== FUNCIONES =====
+# === FUNCIONES ===
 frame_funciones = tk.LabelFrame(frame_izquierda, text="🧮 Funciones del Problema", padx=10, pady=10)
 frame_funciones.pack(fill="x", pady=5)
 
 funcion_objetivo_str = tk.StringVar(value="")
 funcion_restriccion_str = tk.StringVar(value="")
 
-tk.Label(frame_funciones, text="Función Objetivo:").grid(row=0, column=0, sticky="nw")
 entrada_funcion_objetivo = tk.Label(frame_funciones, textvariable=funcion_objetivo_str, anchor="w", bg="white", relief="solid", width=60, height=1, justify="left")
+entrada_funcion_restriccion = tk.Label(frame_funciones, textvariable=funcion_restriccion_str, anchor="w", bg="white", relief="solid", width=60, height=1, justify="left")
+
+tk.Label(frame_funciones, text="Función Objetivo:").grid(row=0, column=0, sticky="nw")
 entrada_funcion_objetivo.grid(row=0, column=1, pady=5, sticky="w")
 tk.Button(frame_funciones, text="✏️ Editar", command=lambda: mostrar_calculadora("objetivo")).grid(row=0, column=2, padx=5)
 
 tk.Label(frame_funciones, text="Función de Restricción:").grid(row=1, column=0, sticky="nw")
-
-entrada_funcion_restriccion = tk.Label(frame_funciones, textvariable=funcion_restriccion_str, anchor="w", bg="white", relief="solid", width=60, height=1, justify="left")
 entrada_funcion_restriccion.grid(row=1, column=1, pady=5, sticky="w")
 tk.Button(frame_funciones, text="✏️ Editar", command=lambda: mostrar_calculadora("restriccion")).grid(row=1, column=2, padx=5)
 
-# ===== POBLACIÓN INICIAL =====
+# === POBLACIÓN ===
 opcion = tk.StringVar(value="s")
 frame_poblacion = tk.LabelFrame(frame_izquierda, text="🧪 Población Inicial", padx=10, pady=10)
 frame_poblacion.pack(fill="x", pady=5)
@@ -179,18 +307,17 @@ ttk.Radiobutton(frame_poblacion, text="Predefinida", variable=opcion, value="n",
 
 frame_si = tk.LabelFrame(frame_poblacion, text="Generar aleatoriamente", padx=10, pady=5)
 frame_no = tk.LabelFrame(frame_poblacion, text="Ingresar manualmente", padx=10, pady=5)
-
 mostrar_frame()
 
-# ===== BOTONES =====
+# === BOTONES ===
 frame_botones = tk.Frame(frame_izquierda)
 frame_botones.pack(pady=10)
 
-tk.Button(frame_botones, text="▶ Ejecutar", bg="#4CAF50", fg="white", command=ejecutar_algoritmo).grid(row=0, column=0, padx=10)
+tk.Button(frame_botones, text="▶ Ejecutar", bg="#4CAF50", fg="white", command=ejecutar_algoritmo_en_hilo).grid(row=0, column=0, padx=10)
 tk.Button(frame_botones, text="🧹 Limpiar", bg="#f0ad4e", fg="white", command=limpiar_campos).grid(row=0, column=1, padx=10)
 tk.Button(frame_botones, text="💾 Guardar CSV", bg="#0275d8", fg="white", command=guardar_csv).grid(row=0, column=2, padx=10)
 
-# ===== RESULTADOS (a la derecha) =====
+# === RESULTADOS ===
 frame_resultados = tk.LabelFrame(frame_derecha, text="📊 Resultados", padx=10, pady=10)
 frame_resultados.pack(fill="both", expand=True)
 
