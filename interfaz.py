@@ -191,7 +191,17 @@ def mostrar_calculadora(label_tipo):
 
     tk.Label(seccion_calculadora, text="Editor de Función", bg="#eef").pack(pady=(5, 0))
 
-    entry_funcion = tk.Entry(seccion_calculadora, width=60)
+    entry_funcion = tk.Entry(seccion_calculadora, width=50)
+
+    # Validación solo para eventos de teclado
+    def limitar_entrada_teclado(event):
+        tecla = event.char
+        if event.keysym in ["BackSpace", "Left", "Right", "Delete", "Tab"]:
+            return
+        if tecla and tecla not in "0123456789+-*/()xXyY":
+            return "break"  # cancela la entrada
+
+    entry_funcion.bind("<KeyPress>", limitar_entrada_teclado)
     entry_funcion.pack(pady=5)
 
     if funcion_activa == "objetivo":
