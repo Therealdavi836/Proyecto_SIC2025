@@ -324,7 +324,7 @@ def resultados_funcion(funcion, fenotipo,):
     for valor in fenotipo:
         fila = []
         for i in range(valor):
-            fila.append(evaluar_funcion(funcion[pos],valor))
+            fila.append(evaluar_funcion(funcion[pos],i))
         matriz.append(fila)
         pos += 1
     return matriz
@@ -343,7 +343,7 @@ def evaluar_funcion(funcion_str, valor_x):
     """
     # Reemplazar 'x' por su valor numérico
     funcion_str = re.sub(r"[XxZz]", f"({valor_x})", funcion_str)    
-    
+
     # Reemplazos básicos
     funcion = funcion.replace("^", "**")
     funcion = funcion.replace("pi", "math.pi")
