@@ -342,7 +342,7 @@ def evaluar_funcion(funcion_str, valor_x):
         80.0
     """
     # Reemplazar 'x' por su valor numérico
-    funcion_str = funcion_str.replace(r"[XxZz]", f"({valor_x})")
+    funcion_str = re.sub(r"[XxZz]", f"({valor_x})", funcion_str)    
     
     # Reemplazos básicos
     funcion = funcion.replace("^", "**")
