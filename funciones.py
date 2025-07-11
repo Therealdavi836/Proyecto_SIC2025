@@ -1,4 +1,5 @@
 import re
+import math
 import random 
 import  numpy as np
 from enum import Enum
@@ -300,6 +301,83 @@ def mayor(fitness):
         if fitness[i] > fitness[mayor]:
             mayor = i
     return mayor
+
+def resultados_funcion(funcion, fenotipo,):
+    """Genera una matriz de resultados para cada valor del fenotipo según la función dada.
+    Para cada valor en el fenotipo, evalúa la función con los coeficientes correspondientes y
+    construye una matriz donde cada fila representa un valor del fenotipo y cada columna
+    representa el resultado de aplicar la función a ese valor.
+    Args:
+        funcion (List[int]): Lista de coeficientes de la función objetivo.
+        fenotipo (List[int]): Lista con los valores máximos de decisión para cada variable. 
+    Returns:
+        List[List[float]]: Matriz donde cada fila corresponde a un valor del fenotipo
+        y cada columna es el resultado de aplicar la función a ese valor.
+    Example:
+        >>> funcion = [2, 3, 4]
+        >>> fenotipo = [1, 2, 3]
+        >>> resultados_funcion(funcion, fenotipo)
+        [[2.0, 3.0, 4.0], [4.0, 6.0, 8.0], [6.0, 9.0, 12.0]]
+    """
+    matriz = []
+    pos = 0
+    for valor in fenotipo:
+        fila = []
+        for i in range(valor):
+            fila.append(evaluar_funcion(funcion[pos],valor))
+        matriz.append(fila)
+        pos += 1
+    return matriz
+
+def evaluar_funcion(funcion_str, valor_x):
+    """Evalúa una función algebraica representada como string, reemplazando 'x' por un valor numérico.
+    La función puede contener operaciones básicas, funciones trigonométricas y raíces.
+    Args:
+        funcion_str (str): Cadena que representa la función algebraica, como '2x+3x+5x'.
+        valor_x (float or int): Valor numérico que reemplazará a 'x' en la función.
+    Returns:
+        float: Resultado de evaluar la función con el valor dado.
+    Example:
+        >>> evaluar_funcion("2*x + 3*x + 5*x", 10
+        80.0
+    """
+    # Reemplazar 'x' por su valor numérico
+    funcion_str = funcion_str.replace(r"[XxZz]", f"({valor_x})")
+    
+    # Reemplazos básicos
+    funcion = funcion.replace("^", "**")
+    funcion = funcion.replace("pi", "math.pi")
+    funcion = funcion.replace("e", "math.e")
+
+    # Funciones estándar
+    funcion = funcion.replace("sin(", "math.sin(")
+    funcion = funcion.replace("cos(", "math.cos(")
+    funcion = funcion.replace("tan(", "math.tan(")
+    funcion = funcion.replace("log(", "math.log10(")
+    funcion = funcion.replace("sqrt(", "math.sqrt(")
+
+    # Funciones recíprocas
+    funcion = funcion.replace("cot(", "1/math.tan(")
+    funcion = funcion.replace("csc(", "1/math.sin(")
+    funcion = funcion.replace("sec(", "1/math.cos(")
+
+    # Reemplazo personalizado para root(n,x) → (x)**(1/n)
+    def reemplazo_root(match):
+        contenido = match.group(1)
+        try:
+            n_str, x_str = contenido.split(",")
+            return f"({x_str})**(1/({n_str}))"
+        except:
+            raise ValueError("Error en la sintaxis de root(n,x). Use coma para separar n y x.")
+
+    funcion = re.sub(r"root\((.*?)\)", reemplazo_root, funcion)
+
+    try:
+        resultado = eval(funcion, {"math": math})
+        return resultado
+    except Exception as e:
+        raise ValueError(f"Error al evaluar la función: {e}")
+
 
 def parsear_restriccion(expresion):
     """
