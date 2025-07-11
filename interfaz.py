@@ -434,16 +434,62 @@ def generar_inputs(*args):
 
 cantidad_var.trace_add("write", generar_inputs)
 
-# # === POBLACIÓN ===
+# ==== Frame de Población ====
 opcion = tk.StringVar(value="s")
 frame_poblacion = tk.LabelFrame(frame_izquierda, text="🧪 Población Inicial", padx=10, pady=10)
 frame_poblacion.pack(fill="x", pady=5)
 
+# === Subframes ===
+frame_si = tk.LabelFrame(frame_poblacion, text="Generar aleatoriamente", padx=10, pady=5)
+frame_no = tk.LabelFrame(frame_poblacion, text="Ingresar manualmente", padx=10, pady=5)
+
+# Para mostrar la tabla generada
+frame_tabla = tk.Frame(frame_si)
+frame_tabla.pack()
+
+# === Generar matriz aleatoria ===
+def generar_matriz(filas=5, columnas=3):
+    return [[round(random.uniform(0, 10), 2) for _ in range(columnas)] for _ in range(filas)]
+
+# === Mostrar tabla con la matriz ===
+def mostrar_tabla():
+    global lista_valores
+
+    for widget in frame_tabla.winfo_children():
+        widget.destroy()
+
+    restriccion = int(entrada_restriccion.get())
+    poblacion = int(entrada_tam_poblacion.get())
+    funcion_resticcion = entrada_funcion_restriccion.get()
+    funcion_resticcion = funcion_resticcion.split("+")
+    valores_funcion_restriccion = resultados_funcion(funcion_resticcion, lista_valores)
+
+    matriz = generarPoblacionInicial(restriccion, poblacion, lista_valores, valores_funcion_restriccion)
+
+    for i, fila in enumerate(matriz):
+        for j, valor in enumerate(fila):
+            label = tk.Label(frame_tabla, text=str(valor), borderwidth=1, relief="solid", width=8)
+            label.grid(row=i, column=j, padx=1, pady=1)
+
+# === Mostrar frame según selección ===
+# def mostrar_frame():
+#     frame_si.pack_forget()
+#     frame_no.pack_forget()
+
+#     if opcion.get() == "s":
+#         frame_si.pack(fill="x", pady=5)
+#     else:
+#         frame_no.pack(fill="x", pady=5)
+
+# === RadioButtons para elegir método ===
 ttk.Radiobutton(frame_poblacion, text="Aleatoria", variable=opcion, value="s", command=mostrar_frame).pack(side="left", padx=5)
 ttk.Radiobutton(frame_poblacion, text="Predefinida", variable=opcion, value="n", command=mostrar_frame).pack(side="left", padx=5)
 
-frame_si = tk.LabelFrame(frame_poblacion, text="Generar aleatoriamente", padx=10, pady=5)
-frame_no = tk.LabelFrame(frame_poblacion, text="Ingresar manualmente", padx=10, pady=5)
+# === Botón para generar matriz y mostrar tabla ===
+btn_generar = tk.Button(frame_si, text="Generar", command=mostrar_tabla)
+btn_generar.pack(pady=5)
+
+# Mostrar el frame inicial
 mostrar_frame()
 
 # === BOTONES ===
