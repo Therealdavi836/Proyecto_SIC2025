@@ -335,16 +335,24 @@ frame_derecha.pack(side="right", fill="y", padx=10, pady=10)
 frame_parametros = tk.LabelFrame(frame_izquierda, text="⚙️ Parámetros Numéricos", padx=10, pady=10)
 frame_parametros.pack(fill="x", pady=5)
 
-labels = ["Porcentaje de Cruce (%)", "Porcentaje de Mutación (%)", "Porcentaje de Convergencia (%)", "Tamaño de Población", "Número de Generaciones", "Elitismo", "Restricción de Factibilidad"]
+# StringVar para detectar cambios
+cantidad_var = tk.StringVar()
+
+labels = ["Porcentaje de Cruce (%)", "Porcentaje de Mutación (%)", "Porcentaje de Convergencia (%)", 
+        "Tamaño de Población", "Número de Generaciones", "Elitismo", "Restricción de Factibilidad", "Cantidad de variables"]
 entradas = []
 
 for i, texto in enumerate(labels):
     tk.Label(frame_parametros, text=texto).grid(row=i, column=0, sticky="w", padx=5, pady=5)
-    entrada = tk.Entry(frame_parametros)
+    if len(labels)-1 == i:
+        entrada = tk.Entry(frame_parametros, textvariable=cantidad_var,)
+    else:
+        entrada = tk.Entry(frame_parametros)
     entrada.grid(row=i, column=1, padx=5, pady=5)
     entradas.append(entrada)
 
-entrada_cruce, entrada_mutacion, entrada_convergencia, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo, entrada_restriccion = entradas
+entrada_cruce, entrada_mutacion, entrada_convergencia, entrada_tam_poblacion, entrada_generaciones, \
+    entrada_elitismo, entrada_restriccion, entrada_numero_variables = entradas
 
 # === MÉTODOS ===
 frame_metodos = tk.LabelFrame(frame_izquierda, text="🧬 Operadores Genéticos", padx=10, pady=10)
@@ -384,7 +392,49 @@ tk.Label(frame_funciones, text="Función de Restricción:").grid(row=1, column=0
 entrada_funcion_restriccion.grid(row=1, column=1, pady=5, sticky="w")
 tk.Button(frame_funciones, text="✏️ Editar", command=lambda: mostrar_calculadora("restriccion")).grid(row=1, column=2, padx=5)
 
-# === POBLACIÓN ===
+# ==== Frame dinámico para las variables ====
+frame_variables = tk.LabelFrame(frame_izquierda, text="🔢 Variables", padx=10, pady=10)
+frame_variables.pack(fill="x", pady=5)
+
+lista_valores = []  # Aquí se almacenarán los valores de los inputs
+entradas = []       # Guarda las StringVars asociadas a cada Entry
+
+def actualizar_valor(index, *_):
+    try:
+        lista_valores[index] = entradas[index].get()
+    except IndexError:
+        pass  # por si se borra mientras se edita
+
+def generar_inputs(*args):
+    global entradas, lista_valores
+    for widget in frame_variables.winfo_children():
+        widget.destroy()
+
+    entradas.clear()
+    lista_valores.clear()
+
+    try:
+        cantidad = int(cantidad_var.get())
+        if cantidad < 0:
+            return
+    except ValueError:
+        return
+
+    for i in range(cantidad):
+        tk.Label(frame_variables, text=f"Var {i+1}:").grid(row=0, column=2*i, padx=2)
+
+        var = tk.StringVar()
+        var.trace_add("write", lambda *_, idx=i: actualizar_valor(idx))
+
+        entry = tk.Entry(frame_variables, width=6, textvariable=var)
+        entry.grid(row=0, column=2*i+1, padx=2)
+
+        entradas.append(var)
+        lista_valores.append("")  # Se inicializa en blanco
+
+cantidad_var.trace_add("write", generar_inputs)
+
+# # === POBLACIÓN ===
 opcion = tk.StringVar(value="s")
 frame_poblacion = tk.LabelFrame(frame_izquierda, text="🧪 Población Inicial", padx=10, pady=10)
 frame_poblacion.pack(fill="x", pady=5)
