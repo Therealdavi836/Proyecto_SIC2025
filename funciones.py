@@ -100,32 +100,28 @@ def resultadoFuncion(individuo, fenotipo, funcion):
             fin +=  fenotipo[i+1]
     return resultado
 
-def generarPoblacionInicial(funcion, restriccion, tamPoblacion, fenotipo):
-    """Genera una población inicial de individuos binarios factibles.
-
-    Cada individuo es una lista de bits (0 o 1) cuya longitud total corresponde
-    a la suma de los bits necesarios para codificar todas las variables según `fenotipo`.
-    Se asegura que cada individuo cumpla con la restricción dada mediante la función `esFactible`.
-
+def generarPoblacionInicial(restriccion, tamPoblacion, varibles_decision, valores_funcion):
+    """Genera una población inicial de individuos decimales factibles.
+    Crea una lista de individuos donde cada individuo es una lista de enteros aleatorios,
+    asegurando que cada uno cumple con una restricción lineal definida por `restriccion`.
     Args:
-        funcion (List[int]): Coeficientes de la función objetivo.
-        restriccion (List[int]): Coeficientes de la función de restricción.
-        tamPoblacion (int): Número deseado de individuos en la población.
-        fenotipo (List[int]): Lista que indica cuántos bits representa cada variable.
-
+        restriccion (int or float): Límite superior de la restricción lineal que los individuos deben cumplir.
+        tamPoblacion (int): Número total de individuos a generar.
+        varibles_decision (List[int]): Lista con el número de variables de decisión (no se usa directamente aquí).
+        valores_funcion (List[List[int]]): Matriz donde cada fila contiene los valores posibles para cada variable.
     Returns:
-        List[List[int]]: Lista de individuos factibles, donde cada uno es una lista de bits.
-
+        List[List[int]]: Lista de individuos, donde cada individuo es una lista de enteros
+        que representan los valores de las variables de decisión.
     Example:
-        >>> generarPoblacionInicial([2, 3], [1, 1], 3, [3, 2])
-        [[1, 0, 0, 1, 1], [0, 1, 0, 0, 1], [1, 1, 0, 1, 0]]
+        >>> generarPoblacionInicial(16000, 5, [3, 2], [[0, 1, 2], [0, 1]])
+        [[1, 0], [2, 1], [0, 1], [1, 0], [2, 0]]
     """
     poblacion = []
     while len(poblacion) < tamPoblacion:
         individuo = []
-        for i in range(np.sum(fenotipo)):
-            individuo.append(random.randint(0,1))
-        if esFactible(individuo, fenotipo, funcion, restriccion):
+        for valor in valores_funcion:
+            individuo.append(random.randint(0,valor))
+        if esFactible(individuo, varibles_decision, restriccion, valores_funcion):
             poblacion.append(individuo)
     return poblacion
 
@@ -175,25 +171,25 @@ def listaDecimales(individuo, fenotipo):
         indice += bits
     return resultado
 
-def esFactible(individuo, fenotipo, coef_restriccion, limite_restriccion):
-    """
-    Verifica si un individuo cumple con la restricción lineal:
-    coef1*X1 + coef2*X2 + ... <= limite_restriccion
-
+def esFactible(individuo, restriccion, valores_funcion):
+    """Verifica si un individuo cumple con una restricción lineal.
+    Calcula el valor de la función objetivo para el individuo dado y verifica si está dentro del límite permitido.
     Args:
-        individuo (List[int]): Cromosoma binario del individuo.
-        fenotipo (List[int]): Número de bits por cada variable.
-        coef_restriccion (List[int]): Coeficientes de la restricción lineal.
-        limite_restriccion (int or float): Límite superior de la restricción.
-
+        individuo (List[int]): Lista de enteros que representa un individuo en la población.
+        restriccion (int or float): Límite superior de la restricción lineal que el individuo debe cumplir.
+        valores_funcion (List[List[int]]): Matriz donde cada fila contiene los valores posibles para cada variable.
     Returns:
-        bool: True si el individuo cumple la restricción, False si no.
+        bool: True si el individuo es factible (cumple la restricción), False en caso contrario.
+    Example:
+        >>> esFactible([1, 0,], 20, [[2, 3], [4, 5]])
+        True
+        >>> esFactible([0, 2], 10, [[2, 3], [4, 5]])
+        False
     """
-    valores = listaDecimales(individuo, fenotipo)
-
-    suma = sum(c * v for c, v in zip(coef_restriccion, valores))
-
-    return suma <= limite_restriccion
+    resultado = 0
+    for i in range(len(individuo)):
+        resultado += valores_funcion[i][individuo[i]]
+    return resultado <= restriccion
 
 def ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion):
     """Permite al usuario ingresar manualmente una población inicial de individuos binarios factibles.
