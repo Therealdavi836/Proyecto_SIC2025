@@ -335,7 +335,7 @@ frame_derecha.pack(side="right", fill="y", padx=10, pady=10)
 frame_parametros = tk.LabelFrame(frame_izquierda, text="⚙️ Parámetros Numéricos", padx=10, pady=10)
 frame_parametros.pack(fill="x", pady=5)
 
-labels = ["Porcentaje de Cruce (%)", "Porcentaje de Mutación (%)", "Tamaño de Población", "Número de Generaciones", "Elitismo"]
+labels = ["Porcentaje de Cruce (%)", "Porcentaje de Mutación (%)", "Porcentaje de Convergencia (%)", "Tamaño de Población", "Número de Generaciones", "Elitismo", "Restricción de Factibilidad"]
 entradas = []
 
 for i, texto in enumerate(labels):
@@ -344,7 +344,7 @@ for i, texto in enumerate(labels):
     entrada.grid(row=i, column=1, padx=5, pady=5)
     entradas.append(entrada)
 
-entrada_cruce, entrada_mutacion, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo = entradas
+entrada_cruce, entrada_mutacion, entrada_convergencia, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo, entrada_restriccion = entradas
 
 # === MÉTODOS ===
 frame_metodos = tk.LabelFrame(frame_izquierda, text="🧬 Operadores Genéticos", padx=10, pady=10)
