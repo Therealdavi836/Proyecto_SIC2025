@@ -7,9 +7,58 @@ from tkinter import ttk, messagebox, filedialog
 from funciones import *
 from metodos import *
 
+
 # Variables globales necesarias
+# Ague esta variable global para los checkpints
+indice_generacion_actual = 0  # Controla qué generación se está mostrando
+
 seccion_calculadora = None
 funcion_activa = None
+
+
+def mostrar_generacion(indice):
+    global json_generaciones, resultados_text
+
+    if 0 <= indice < len(json_generaciones):
+        resultados_text.delete("1.0", "end")
+        gen = json_generaciones[indice]
+
+        resultados_text.insert("end", f"Generación {gen['generacion']}\n")
+        resultados_text.insert("end", "N° | Cromosoma binario                 | Fenotipo       | Obj. | Factible\n")
+        resultados_text.insert("end", "-"*70 + "\n")
+
+        for i, ind in enumerate(gen["individuos"]):
+            crom = ind["cromosoma"]
+            feno = ind["fenotipo"]
+            obj = ind["objetivo"]
+            fact = "✔" if ind["factible"] else "❌"
+            resultados_text.insert("end", f"{i+1:2d} | {crom:28} | {feno} | {obj:5} | {fact}\n")
+
+        # Mostrar también el mejor
+        mejor = gen["mejor"]
+        resultados_text.insert("end", "\n🌟 Mejor individuo de esta generación:\n")
+        resultados_text.insert("end", f"Cromosoma: {mejor['cromosoma']}\n")
+        resultados_text.insert("end", f"Fenotipo: {mejor['fenotipo']}\n")
+        resultados_text.insert("end", f"Objetivo: {mejor['objetivo']}\n")
+        resultados_text.insert("end", f"Factible: {'✔' if mejor['factible'] else '❌'}\n")
+def cambiar_generacion(delta):
+    global indice_generacion_actual
+    nuevo_indice = indice_generacion_actual + delta
+    if 0 <= nuevo_indice < len(json_generaciones):
+        indice_generacion_actual = nuevo_indice
+        mostrar_generacion(indice_generacion_actual)
+def ir_a_generacion():
+    global indice_generacion_actual
+    try:
+        numero = int(entrada_generacion_ir.get()) - 1
+        if 0 <= numero < len(json_generaciones):
+            indice_generacion_actual = numero
+            mostrar_generacion(indice_generacion_actual)
+        else:
+            messagebox.showwarning("Fuera de rango", f"Debe ser entre 1 y {len(json_generaciones)}")
+    except ValueError:
+        messagebox.showerror("Error", "Debe ingresar un número entero.")
+
 
 def ejecutar_algoritmo_en_hilo():
     hilo = threading.Thread(target=ejecutar_algoritmo)
@@ -20,7 +69,7 @@ def imprimir_y_guardar(texto):
     resultados_text.see("end")
     global historial_resultados
     historial_resultados += texto
-
+#ejecutar_algoritmo
 # Funciones de control de interfaz
 def ejecutar_algoritmo():
     global json_generaciones
@@ -46,6 +95,8 @@ def ejecutar_algoritmo():
             "restriccion": funcion_restriccion_str.get().strip(),
             "modo_poblacion": opcion.get()
         }
+        '''agrege esto mis lideres'''
+        print(f"DEBUG - Restricción cruda: {parametros['restriccion']}")
 
         # 2. Parsear funciones
         coef_funcion = funcionesAVectores(parametros["objetivo"])
@@ -187,6 +238,9 @@ def ejecutar_algoritmo():
         mejor = mejores[0]
         resultado = resultadoFuncion(mejor, fenotipo, coef_funcion)
         valores = [int(v) for v in listaDecimales(mejor, fenotipo)]
+        # aqui agregue 
+        indice_generacion_actual = len(json_generaciones) - 1
+        mostrar_generacion(indice_generacion_actual)
 
         imprimir_y_guardar("\nMejor solución encontrada:\n")
         imprimir_y_guardar(f"Cromosoma: {mejor.tolist()}\n")
@@ -201,6 +255,7 @@ def ejecutar_algoritmo():
 
         cumple = "✔ Cumple restricción" if restriccion_valor <= limite_restriccion else "❌ No cumple restricción"
         imprimir_y_guardar(f"Restricción: {restriccion_expr} = {restriccion_valor} <= {limite_restriccion} → {cumple}\n")
+        
 
         try:
             with open("registro_generaciones.json", "w", encoding="utf-8") as json_file:
@@ -275,8 +330,8 @@ def mostrar_calculadora(label_tipo):
         tecla = event.char
         if event.keysym in ["BackSpace", "Left", "Right", "Delete", "Tab"]:
             return
-        if tecla and tecla not in "0123456789+-*/()xXyY":
-            return "break"  # cancela la entrada
+        if tecla and tecla not in "0123456789+-*/()xXyY<> =":  # <-- Se agregó el espacio
+            return "break"
 
     entry_funcion.bind("<KeyPress>", limitar_entrada_teclado)
     entry_funcion.pack(pady=5)
@@ -335,24 +390,16 @@ frame_derecha.pack(side="right", fill="y", padx=10, pady=10)
 frame_parametros = tk.LabelFrame(frame_izquierda, text="⚙️ Parámetros Numéricos", padx=10, pady=10)
 frame_parametros.pack(fill="x", pady=5)
 
-# StringVar para detectar cambios
-cantidad_var = tk.StringVar()
-
-labels = ["Porcentaje de Cruce (%)", "Porcentaje de Mutación (%)", "Porcentaje de Convergencia (%)", 
-        "Tamaño de Población", "Número de Generaciones", "Elitismo", "Restricción de Factibilidad", "Cantidad de variables"]
+labels = ["Porcentaje de Cruce (%)", "Porcentaje de Mutación (%)", "Tamaño de Población", "Número de Generaciones", "Elitismo"]
 entradas = []
 
 for i, texto in enumerate(labels):
     tk.Label(frame_parametros, text=texto).grid(row=i, column=0, sticky="w", padx=5, pady=5)
-    if len(labels)-1 == i:
-        entrada = tk.Entry(frame_parametros, textvariable=cantidad_var,)
-    else:
-        entrada = tk.Entry(frame_parametros)
+    entrada = tk.Entry(frame_parametros)
     entrada.grid(row=i, column=1, padx=5, pady=5)
     entradas.append(entrada)
 
-entrada_cruce, entrada_mutacion, entrada_convergencia, entrada_tam_poblacion, entrada_generaciones, \
-    entrada_elitismo, entrada_restriccion, entrada_numero_variables = entradas
+entrada_cruce, entrada_mutacion, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo = entradas
 
 # === MÉTODOS ===
 frame_metodos = tk.LabelFrame(frame_izquierda, text="🧬 Operadores Genéticos", padx=10, pady=10)
@@ -375,6 +422,7 @@ metodo_mutacion.grid(row=2, column=1, pady=5)
 metodo_mutacion.current(0)
 
 # === FUNCIONES ===
+
 frame_funciones = tk.LabelFrame(frame_izquierda, text="🧮 Funciones del Problema", padx=10, pady=10)
 frame_funciones.pack(fill="x", pady=5)
 
@@ -392,49 +440,7 @@ tk.Label(frame_funciones, text="Función de Restricción:").grid(row=1, column=0
 entrada_funcion_restriccion.grid(row=1, column=1, pady=5, sticky="w")
 tk.Button(frame_funciones, text="✏️ Editar", command=lambda: mostrar_calculadora("restriccion")).grid(row=1, column=2, padx=5)
 
-# ==== Frame dinámico para las variables ====
-frame_variables = tk.LabelFrame(frame_izquierda, text="🔢 Variables", padx=10, pady=10)
-frame_variables.pack(fill="x", pady=5)
-
-lista_valores = []  # Aquí se almacenarán los valores de los inputs
-entradas = []       # Guarda las StringVars asociadas a cada Entry
-
-def actualizar_valor(index, *_):
-    try:
-        lista_valores[index] = entradas[index].get()
-    except IndexError:
-        pass  # por si se borra mientras se edita
-
-def generar_inputs(*args):
-    global entradas, lista_valores
-    for widget in frame_variables.winfo_children():
-        widget.destroy()
-
-    entradas.clear()
-    lista_valores.clear()
-
-    try:
-        cantidad = int(cantidad_var.get())
-        if cantidad < 0:
-            return
-    except ValueError:
-        return
-
-    for i in range(cantidad):
-        tk.Label(frame_variables, text=f"Var {i+1}:").grid(row=0, column=2*i, padx=2)
-
-        var = tk.StringVar()
-        var.trace_add("write", lambda *_, idx=i: actualizar_valor(idx))
-
-        entry = tk.Entry(frame_variables, width=6, textvariable=var)
-        entry.grid(row=0, column=2*i+1, padx=2)
-
-        entradas.append(var)
-        lista_valores.append("")  # Se inicializa en blanco
-
-cantidad_var.trace_add("write", generar_inputs)
-
-# # === POBLACIÓN ===
+# === POBLACIÓN ===
 opcion = tk.StringVar(value="s")
 frame_poblacion = tk.LabelFrame(frame_izquierda, text="🧪 Población Inicial", padx=10, pady=10)
 frame_poblacion.pack(fill="x", pady=5)
@@ -458,6 +464,25 @@ tk.Button(frame_botones, text="💾 Guardar Registro en JSON", bg="#fffb00", fg=
 # === RESULTADOS ===
 frame_resultados = tk.LabelFrame(frame_derecha, text="📊 Resultados", padx=10, pady=10)
 frame_resultados.pack(fill="both", expand=True)
+
+#Pa' que quede lindo
+frame_navegacion = tk.Frame(frame_derecha)
+frame_navegacion.pack(pady=5)
+
+btn_anterior = tk.Button(frame_navegacion, text="⬅ Anterior", command=lambda: cambiar_generacion(-1))
+btn_anterior.pack(side="left", padx=5)
+
+btn_siguiente = tk.Button(frame_navegacion, text="Siguiente ➡", command=lambda: cambiar_generacion(1))
+btn_siguiente.pack(side="left", padx=5)
+
+tk.Label(frame_navegacion, text="Ir a generación #:").pack(side="left", padx=5)
+entrada_generacion_ir = tk.Entry(frame_navegacion, width=5)
+entrada_generacion_ir.pack(side="left")
+
+btn_ir = tk.Button(frame_navegacion, text="Ir", command=lambda: ir_a_generacion())
+btn_ir.pack(side="left", padx=5)
+
+
 
 resultados_text = tk.Text(frame_resultados, wrap="word")
 resultados_text.pack(expand=True, fill="both")
