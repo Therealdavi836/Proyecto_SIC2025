@@ -447,9 +447,10 @@ frame_no = tk.LabelFrame(frame_poblacion, text="Ingresar manualmente", padx=10, 
 frame_tabla = tk.Frame(frame_si)
 frame_tabla.pack()
 
-# === Generar matriz aleatoria ===
-def generar_matriz(filas=5, columnas=3):
-    return [[round(random.uniform(0, 10), 2) for _ in range(columnas)] for _ in range(filas)]
+frame_tabla_manual = tk.Frame(frame_no)
+frame_tabla_manual.pack()
+
+entradas_tabla = []  # Guardar referencias de Entry para la matriz manual
 
 # === Mostrar tabla con la matriz ===
 def mostrar_tabla():
@@ -471,6 +472,44 @@ def mostrar_tabla():
             label = tk.Label(frame_tabla, text=str(valor), borderwidth=1, relief="solid", width=8)
             label.grid(row=i, column=j, padx=1, pady=1)
 
+def mostrar_tabla_manual():
+    global lista_valores
+    for widget in frame_tabla_manual.winfo_children():
+        widget.destroy()
+
+    entradas_tabla.clear()
+    filas = int(entrada_tam_poblacion.get())
+    columnas = len(lista_valores)
+
+    tabla_frame = tk.Frame(frame_tabla_manual)
+    tabla_frame.pack()
+
+    for i in range(filas):
+        fila_entries = []
+        for j in range(columnas):
+            e = tk.Entry(tabla_frame, width=8)
+            e.grid(row=i, column=j, padx=1, pady=1)
+            fila_entries.append(e)
+        entradas_tabla.append(fila_entries)
+
+    # Botón para guardar los datos
+    def guardar_valores():
+        matriz = []
+        for fila in entradas_tabla:
+            fila_valores = []
+            for e in fila:
+                try:
+                    valor = float(e.get())
+                except ValueError:
+                    valor = None
+                fila_valores.append(valor)
+            matriz.append(fila_valores)
+        
+        messagebox.showinfo("Matriz guardada", f"Se ha guardado la matriz con {len(matriz)} filas.")
+        print("Matriz ingresada manualmente:", matriz)
+
+    btn_guardar = tk.Button(frame_tabla_manual, text="Guardar valores", command=guardar_valores)
+    btn_guardar.pack(pady=5)
 # === Mostrar frame según selección ===
 # def mostrar_frame():
 #     frame_si.pack_forget()
