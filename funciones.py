@@ -399,7 +399,7 @@ def parsear_restriccion(expresion):
         limite = int(derecha)
 
         # Extraer los coeficientes antes de cada 'Xn'
-        coeficientes = re.findall(r'([+-]?\s*\d+)\s*X\d+', izquierda)
+        coeficientes = re.findall(r'([+-]?\s*\d+)\s*[xX]\d*', izquierda)
         coeficientes = [int(c.replace(" ", "")) for c in coeficientes]
 
         if not coeficientes:

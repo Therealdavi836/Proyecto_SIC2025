@@ -6,6 +6,9 @@ import json
 from tkinter import ttk, messagebox, filedialog
 from funciones import *
 from metodos import *
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
 
 
 # Variables globales necesarias
@@ -14,7 +17,54 @@ indice_generacion_actual = 0  # Controla qué generación se está mostrando
 
 seccion_calculadora = None
 funcion_activa = None
+def mostrar_grafica():
+    global json_generaciones
+    
+    if not json_generaciones:
+        messagebox.showinfo("Información", "Primero ejecute el algoritmo para generar datos")
+        return
+    
+    # Crear ventana emergente para la gráfica
+    ventana_grafica = tk.Toplevel(root)
+    ventana_grafica.title("Evolución del Algoritmo Genético")
+    ventana_grafica.geometry("800x600")
+    
+    fig = Figure(figsize=(8, 6), dpi=100)
+    ax = fig.add_subplot(111)
+    
+    # Preparar datos para la gráfica
+    generaciones = [g['generacion'] for g in json_generaciones]
+    mejores_valores = [g['mejor']['objetivo'] for g in json_generaciones]
+    promedios = [sum(ind['objetivo'] for ind in g['individuos'])/len(g['individuos']) 
+                 for g in json_generaciones]
+    
+    # Crear gráfico
+    ax.plot(generaciones, mejores_valores, 'g-', linewidth=2, label='Mejor Individuo')
+    ax.plot(generaciones, promedios, 'b--', linewidth=1, label='Promedio Población')
+    ax.set_title('Evolución del Fitness por Generación', fontsize=14)
+    ax.set_xlabel('Generación', fontsize=12)
+    ax.set_ylabel('Valor de Fitness', fontsize=12)
+    ax.grid(True, linestyle='--', alpha=0.7)
+    ax.legend()
+    
+    # Integrar gráfica en Tkinter
+    canvas = FigureCanvasTkAgg(fig, master=ventana_grafica)
+    canvas.draw()
+    canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+    
+    # Botón para guardar la imagen
+    btn_guardar = tk.Button(ventana_grafica, text="💾 Guardar Gráfica", 
+                           command=lambda: guardar_grafica(fig))
+    btn_guardar.pack(pady=10)
 
+def guardar_grafica(fig):
+    ruta = filedialog.asksaveasfilename(
+        defaultextension=".png",
+        filetypes=[("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All files", "*.*")]
+    )
+    if ruta:
+        fig.savefig(ruta, dpi=300)
+        messagebox.showinfo("Éxito", f"Gráfica guardada en:\n{ruta}")
 
 def mostrar_generacion(indice):
     global json_generaciones, resultados_text
@@ -459,13 +509,15 @@ frame_botones.pack(pady=10)
 tk.Button(frame_botones, text="▶ Ejecutar", bg="#4CAF50", fg="white", command=ejecutar_algoritmo_en_hilo).grid(row=0, column=0, padx=10)
 tk.Button(frame_botones, text="🧹 Limpiar", bg="#f0ad4e", fg="white", command=limpiar_campos).grid(row=0, column=1, padx=10)
 tk.Button(frame_botones, text="💾 Guardar CSV", bg="#0275d8", fg="white", command=guardar_csv).grid(row=0, column=2, padx=10)
-tk.Button(frame_botones, text="💾 Guardar Registro en JSON", bg="#fffb00", fg="white", command=guardar_csv).grid(row=0, column=3, padx=10)
+tk.Button(frame_botones, text="💾 Guardar Registro en JSON", bg="#3694a1", fg="white", command=guardar_csv).grid(row=0, column=3, padx=10)
+tk.Button(frame_botones, text="📊 Visualizar Gráfica", bg="#9b59b6", fg="white",command=mostrar_grafica).grid(row=0, column=4, padx=10)
 
 # === RESULTADOS ===
 frame_resultados = tk.LabelFrame(frame_derecha, text="📊 Resultados", padx=10, pady=10)
 frame_resultados.pack(fill="both", expand=True)
 
 #Pa' que quede lindo
+
 frame_navegacion = tk.Frame(frame_derecha)
 frame_navegacion.pack(pady=5)
 
