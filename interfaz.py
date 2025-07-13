@@ -6,14 +6,64 @@ import json
 from tkinter import ttk, messagebox, filedialog
 from funciones import *
 from metodos import *
-
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
 
 # Variables globales necesarias
 # Ague esta variable global para los checkpints
 indice_generacion_actual = 0  # Controla qué generación se está mostrando
-
 seccion_calculadora = None
 funcion_activa = None
+
+def mostrar_grafica():
+    global json_generaciones
+    
+    if not json_generaciones:
+        messagebox.showinfo("Información", "Primero ejecute el algoritmo para generar datos")
+        return
+    
+    # Crear ventana emergente para la gráfica
+    ventana_grafica = tk.Toplevel(root)
+    ventana_grafica.title("Evolución del Algoritmo Genético")
+    ventana_grafica.geometry("800x600")
+    
+    fig = Figure(figsize=(8, 6), dpi=100)
+    ax = fig.add_subplot(111)
+    
+    # Preparar datos para la gráfica
+    generaciones = [g['generacion'] for g in json_generaciones]
+    mejores_valores = [g['mejor']['objetivo'] for g in json_generaciones]
+    promedios = [sum(ind['objetivo'] for ind in g['individuos'])/len(g['individuos']) 
+                 for g in json_generaciones]
+    
+    # Crear gráfico
+    ax.plot(generaciones, mejores_valores, 'g-', linewidth=2, label='Mejor Individuo')
+    ax.plot(generaciones, promedios, 'b--', linewidth=1, label='Promedio Población')
+    ax.set_title('Evolución del Fitness por Generación', fontsize=14)
+    ax.set_xlabel('Generación', fontsize=12)
+    ax.set_ylabel('Valor de Fitness', fontsize=12)
+    ax.grid(True, linestyle='--', alpha=0.7)
+    ax.legend()
+    
+    # Integrar gráfica en Tkinter
+    canvas = FigureCanvasTkAgg(fig, master=ventana_grafica)
+    canvas.draw()
+    canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+    
+    # Botón para guardar la imagen
+    btn_guardar = tk.Button(ventana_grafica, text="💾 Guardar Gráfica", 
+                           command=lambda: guardar_grafica(fig))
+    btn_guardar.pack(pady=10)
+
+def guardar_grafica(fig):
+    ruta = filedialog.asksaveasfilename(
+        defaultextension=".png",
+        filetypes=[("PNG files", "*.png"), ("JPEG files", "*.jpg"), ("All files", "*.*")]
+    )
+    if ruta:
+        fig.savefig(ruta, dpi=300)
+        messagebox.showinfo("Éxito", f"Gráfica guardada en:\n{ruta}")
 
 def validar_y_ejecutar():
     """"Valida los parámetros ingresados y ejecuta el algoritmo genético si son correctos.
@@ -44,6 +94,49 @@ def validar_y_ejecutar():
     # Si pasa todas las validaciones, ejecuta el algoritmo
     ejecutar_algoritmo_en_hilo()
 
+def mostrar_generacion(indice):
+    global json_generaciones, resultados_text
+
+    if 0 <= indice < len(json_generaciones):
+        resultados_text.delete("1.0", "end")
+        gen = json_generaciones[indice]
+
+        resultados_text.insert("end", f"📋 Generación {gen['generacion']}\n")
+        resultados_text.insert("end", "N° | Cromosoma binario                 | Fenotipo       | Obj. | Factible\n")
+        resultados_text.insert("end", "-"*70 + "\n")
+
+        for i, ind in enumerate(gen["individuos"]):
+            crom = ind["cromosoma"]
+            feno = ind["fenotipo"]
+            obj = ind["objetivo"]
+            fact = "✔" if ind["factible"] else "❌"
+            resultados_text.insert("end", f"{i+1:2d} | {crom:28} | {feno} | {obj:5} | {fact}\n")
+
+        # Mostrar también el mejor
+        mejor = gen["mejor"]
+        resultados_text.insert("end", "\n🌟 Mejor individuo de esta generación:\n")
+        resultados_text.insert("end", f"Cromosoma: {mejor['cromosoma']}\n")
+        resultados_text.insert("end", f"Fenotipo: {mejor['fenotipo']}\n")
+        resultados_text.insert("end", f"Objetivo: {mejor['objetivo']}\n")
+        resultados_text.insert("end", f"Factible: {'✔' if mejor['factible'] else '❌'}\n")
+def cambiar_generacion(delta):
+    global indice_generacion_actual
+    nuevo_indice = indice_generacion_actual + delta
+    if 0 <= nuevo_indice < len(json_generaciones):
+        indice_generacion_actual = nuevo_indice
+        mostrar_generacion(indice_generacion_actual)
+
+def ir_a_generacion():
+    global indice_generacion_actual
+    try:
+        numero = int(entrada_generacion_ir.get()) - 1
+        if 0 <= numero < len(json_generaciones):
+            indice_generacion_actual = numero
+            mostrar_generacion(indice_generacion_actual)
+        else:
+            messagebox.showwarning("Fuera de rango", f"Debe ser entre 1 y {len(json_generaciones)}")
+    except ValueError:
+        messagebox.showerror("Error", "Debe ingresar un número entero.")
 
 def ejecutar_algoritmo_en_hilo():
     hilo = threading.Thread(target=ejecutar_algoritmo)
@@ -183,7 +276,7 @@ def ejecutar_algoritmo():
             
             # 🔍 Construir entrada para el JSON
             datos_generacion = {
-                "generacion": generacion + 1,
+                "generacion": generacion,
                 "individuos": [],
                 "mejor": None
             }
@@ -217,48 +310,58 @@ def ejecutar_algoritmo():
 
             time.sleep(0.05)
 
-        # 7. Mostrar en la interfaz SOLO la última generación y mejor solución
+         # 7. Verificar si se encontraron soluciones y calcular el mejor individuo
+        if not poblacion:
+            imprimir_y_guardar("\n❌ El algoritmo no encontró ninguna solución factible.")
+            messagebox.showwarning("Finalizado", "No se encontraron soluciones factibles.")
+            return
 
-        imprimir_y_guardar("\nTabla de individuos:\n")
-        imprimir_y_guardar("N° | Cromosoma binario                 | Fenotipo       | Obj. | Factible\n")
-        imprimir_y_guardar("-"*70 + "\n")
-
-        for i, ind in enumerate(poblacion):
-            cromosoma = "".join(str(bit) for bit in ind)
-            fenotipo_vals = [int(z) for z in listaDecimales(ind, fenotipo)]
-            obj = suma_funcion(ind, valores_funcion_objetivo)
-            factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion)
-            imprimir_y_guardar(f"{i+1:2d} | {cromosoma:28} | {fenotipo_vals} | {obj:5} | {'✔' if factible else '❌'}\n")
-
+        # PRIMERO: Calcular la mejor solución de la población final
         mejores = sorted(poblacion, key=lambda ind: suma_funcion(ind, valores_funcion_objetivo), reverse=True)
         mejor = mejores[0]
         resultado = suma_funcion(mejor, valores_funcion_objetivo)
         valores = [int(v) for v in listaDecimales(mejor, fenotipo)]
-        # aqui agregue 
+
+        # SEGUNDO: Mostrar la tabla de la última generación en la interfaz
+        imprimir_y_guardar("\n--- Tabla de la Última Generación ---\n")
+        for i, ind in enumerate(poblacion):
+            # Tu código para imprimir la tabla de la población ya estaba aquí y era correcto
+            cromosoma_bin = decimales_a_binario(ind, fenotipo)
+            cromosoma_str = "".join(map(str, cromosoma_bin))
+            obj = suma_funcion(ind, valores_funcion_objetivo)
+            factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion)
+            imprimir_y_guardar(f"{i+1:2d} | {cromosoma_str:28} | {str(ind):<14} | {obj:5.2f} | {'✔' if factible else '❌'}\n")
+        
+        # TERCERO: Actualizar la tabla visual con la navegación
         indice_generacion_actual = len(json_generaciones) - 1
         mostrar_generacion(indice_generacion_actual)
 
-        imprimir_y_guardar("\nMejor solución encontrada:\n")
-        imprimir_y_guardar(f"Cromosoma: {mejor.tolist()}\n")
+        # CUARTO: Mostrar el resumen de la mejor solución encontrada
+        imprimir_y_guardar("\n--- Mejor Solución Global Encontrada ---\n")
+        mejor_cromosoma_bin = decimales_a_binario(mejor, fenotipo)
+        imprimir_y_guardar(f"Cromosoma: {"".join(map(str, mejor_cromosoma_bin))}\n")
         imprimir_y_guardar(f"Fenotipo decodificado: {valores}\n")
 
-        expresion = " + ".join(f"{coef}*X{i+1}" for i, coef in enumerate(funcion_objetivo))
+        expresion = funcion_objetivo_str.get()
         valores_str = " + ".join(f"{funcion_objetivo[i]}*{valores[i]}" for i in range(len(funcion_objetivo)))
-        imprimir_y_guardar(f"Función objetivo: {expresion} = {valores_str} = {resultado}\n")
+        imprimir_y_guardar(f"Función objetivo: {expresion} = {valores_str} = {resultado:.2f}\n")
 
+        restriccion_str = funcion_restriccion_str.get()
         restriccion_expr = " + ".join(f"{funcion_restriccion[i]}*{valores[i]}" for i in range(len(valores)))
-        restriccion_valor = sum(funcion_restriccion[i] * valores[i] for i in range(len(valores)))
-
+        restriccion_valor = suma_funcion(valores, valores_funcion_restriccion) # Corregido para usar la función correcta
+        
         cumple = "✔ Cumple restricción" if restriccion_valor <= parametros["restriccion"] else "❌ No cumple restricción"
-        imprimir_y_guardar(f"Restricción: {restriccion_expr} = {restriccion_valor} <= {parametros['restriccion']} → {cumple}\n")
+        imprimir_y_guardar(f"Restricción: {restriccion_str} => {restriccion_expr} = {restriccion_valor:.2f} <= {parametros['restriccion']} → {cumple}\n")
+
+        # --- FIN DEL BLOQUE CORREGIDO ---
 
         try:
             with open("registro_generaciones.json", "w", encoding="utf-8") as json_file:
                 json.dump(json_generaciones, json_file, indent=4, ensure_ascii=False)
         except Exception as e:
             print("No se pudo guardar el archivo JSON:", e)
-
-
+            
+        
     except Exception as e:
         messagebox.showerror("Error", f"Error en entrada o ejecución: {str(e)}")
 
@@ -274,13 +377,13 @@ def guardar_csv():
     ruta = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV files", "*.csv")])
     if ruta:
         try:
-            # Guardar solo los resultados mostrados (última generación)
-            with open(ruta, "w", encoding="utf-8") as f:
+        # Guardar solo los resultados mostrados
+            with open(ruta, "w", encoding="utf-8-sig") as f:
                 f.write(historial_resultados)
 
             # Guardar todas las generaciones
             ruta_generaciones = ruta.replace(".csv", "_todas_generaciones.csv")
-            with open(ruta_generaciones, "w", encoding="utf-8") as f_gen:
+            with open(ruta_generaciones, "w", encoding="utf-8-sig") as f_gen:
                 for tabla in historial_resultados_csv_completo:
                     f_gen.write(tabla + "\n")
 
@@ -422,8 +525,7 @@ for i, texto in enumerate(labels):
     entrada.grid(row=row, column=col + 1, padx=5, pady=5)
     entradas.append(entrada)
 
-entrada_cruce, entrada_mutacion, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo = entradas
-
+entrada_cruce, entrada_mutacion, entrada_convergencia, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo, entrada_restriccion, entrada_numero_variables = entradas
 # === MÉTODOS ===
 frame_metodos = tk.LabelFrame(frame_izquierda, text="🧬 Operadores Genéticos", padx=10, pady=10)
 frame_metodos.pack(fill="x", pady=5)
@@ -692,9 +794,9 @@ frame_botones.pack(pady=10)
 tk.Button(frame_botones, text="▶ Ejecutar", bg="#4CAF50", fg="white", command=validar_y_ejecutar).grid(row=0, column=0, padx=10)
 tk.Button(frame_botones, text="🧹 Limpiar", bg="#f0ad4e", fg="white", command=limpiar_campos).grid(row=0, column=1, padx=10)
 tk.Button(frame_botones, text="💾 Guardar CSV", bg="#0275d8", fg="white", command=guardar_csv).grid(row=0, column=2, padx=10)
-tk.Button(frame_botones, text="💾 Guardar Registro en JSON", bg="#fffb00", fg="white", command=guardar_csv).grid(row=0, column=3, padx=10)
-
-# === RESULTADOS ===
+tk.Button(frame_botones, text="💾 Guardar Registro en JSON", bg="#0bbbe8", fg="white", command=guardar_json).grid(row=0, column=3, padx=10)
+tk.Button(frame_botones, text="📊 Visualizar Gráfica", bg="#9b59b6", fg="white",command=mostrar_grafica).grid(row=0, column=4, padx=10)
+# === RESULTADOS ===    
 frame_resultados = tk.LabelFrame(frame_derecha, text="📊 Resultados", padx=10, pady=10)
 frame_resultados.pack(fill="both", expand=True)
 
