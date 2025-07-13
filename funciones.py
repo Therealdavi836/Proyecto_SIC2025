@@ -4,62 +4,6 @@ import random
 import  numpy as np
 from enum import Enum
 
-def funcionesAVectores(funcion):
-    """Convierte una función algebraica en formato string a una lista de coeficientes enteros.
-
-    La función espera un string con términos separados por '+' y variables representadas como 
-    'x', 'X', 'z' o 'Z' (por ejemplo: "2x+3X+4Z+5x"). Extrae los coeficientes numéricos y 
-    los convierte a una lista de enteros.
-
-    Args:
-        funcion (str): Una cadena con la función en notación algebraica, como "2x+3X+4X".
-
-    Returns:
-        List[int]: Una lista de coeficientes enteros extraídos del string.
-
-    Example:
-        >>> funcionesAVectores("2x+3X+4X")
-        [2, 3, 4]
-    """
-    funcion = funcion.replace(" ", "")
-    funcion = funcion.replace("+", "")
-    funcion = re.split(r"[XxZz]", funcion)
-    funcion.pop()
-    for i in range(len(funcion)):
-        funcion[i] = int(funcion[i])
-    return funcion
-
-def valoresMaxFenotipoBin(tamFuncion):
-    """Solicita al usuario el valor máximo de decisión por fenotipo y calcula los bits necesarios para representarlos.
-
-    Para cada variable (fenotipo), esta función pide al usuario ingresar la cantidad máxima de valores posibles.
-    Luego calcula cuántos bits son necesarios para representar dichos valores en binario usando `bit_length()`.
-
-    Args:
-        tamFuncion (int): Número de fenotipos o variables de decisión.
-
-    Returns:
-        List[int]: Lista con la cantidad de bits necesarios para cada fenotipo.
-
-    Example:
-        Supónga que se ingresan los siguientes valores máximos:
-        10 → necesita 4 bits
-        30 → necesita 5 bits
-
-        >>> valoresMaxFenotipoBin(2)
-        Ingresa la cantidad de valores de decisión maxima para el fenotipo (por cada variable son 4 bits) 0 :
-        10
-        Ingresa la cantidad de valores de decisión maxima para el fenotipo (por cada variable son 4 bits) 1 :
-        30
-        [4, 5]
-    """
-    valores = []
-    for i in range(tamFuncion):
-        print("Ingresa la cantidad de valores de decisión maxima para el fenotipo (por cada variable son 4 bits) ", i, ":")
-        valor = (int(input())).bit_length()
-        valores.append(valor)
-    return valores
-
 def resultadoFuncion(individuo, fenotipo, funcion):
     """Calcula el valor de una función objetivo dado un individuo binario y su fenotipo asociado.
 
@@ -119,9 +63,9 @@ def generarPoblacionInicial(restriccion, tamPoblacion, varibles_decision, valore
     poblacion = []
     while len(poblacion) < tamPoblacion:
         individuo = []
-        for valor in valores_funcion:
+        for valor in varibles_decision:
             individuo.append(random.randint(0,valor))
-        if esFactible(individuo, varibles_decision, restriccion, valores_funcion):
+        if esFactible(individuo, restriccion, valores_funcion):
             poblacion.append(individuo)
     return poblacion
 
@@ -147,6 +91,24 @@ def convertirBinarioADecimal(fraccion):
     for i in range(len(fraccion)):
         decimal += fraccion[i] * (2 ** ((len(fraccion) - i))-1)
     return decimal
+
+def decimales_a_binario(valores, tamaños):
+    """Convierte una lista de valores decimales a su representación binaria con tamaños específicos.
+    Cada valor decimal se convierte a binario y se rellena con ceros a la izquierda según el tamaño especificado.
+    Args:
+        valores (List[int]): Lista de valores decimales a convertir.
+        tamaños (List[int]): Lista con el número de bits que debe tener cada valor en su representación binaria.
+    Returns:
+        List[int]: Lista de bits (0s y 1s) que representa la concatenación de todos los valores binarios.
+    Example:
+        >>> decimales_a_binario([5, 3], [3, 2])
+        [1, 0, 1, 1, 1]  # 5 en binario es '101' y 3 en binario es '11'
+    """
+    resultado = []
+    for valor, tamaño in zip(valores, tamaños):
+        binario = format(valor, f'0{tamaño}b')  # Convierte a binario con ceros a la izquierda
+        resultado.extend([int(bit) for bit in binario])  # Convierte cada bit a entero y lo añade a la lista
+    return resultado
 
 def listaDecimales(individuo, fenotipo):
     """
@@ -191,40 +153,6 @@ def esFactible(individuo, restriccion, valores_funcion):
         resultado += valores_funcion[i][individuo[i]]
     return resultado <= restriccion
 
-def ingresarPoblacionInicial(poblacionInicial, fenotipo, funcionFitnness, restriccion, tamPoblacion):
-    """Permite al usuario ingresar manualmente una población inicial de individuos binarios factibles.
-
-    Para cada individuo, se solicita al usuario una secuencia de bits separados por espacios. 
-    Se valida que el número de bits coincida con el tamaño total del fenotipo, y que el individuo cumpla la restricción.
-
-    Args:
-        poblacionInicial (List[List[int]]): Lista donde se irán agregando los individuos válidos.
-        fenotipo (List[int]): Lista con la cantidad de bits por cada variable (tamaños de fracciones).
-        funcionFitnness (List[int]): Coeficientes de la función objetivo usada para verificar factibilidad.
-        restriccion (int or float): Límite que los individuos no deben sobrepasar.
-        tamPoblacion (int): Número total de individuos que se desea ingresar.
-
-    Returns:
-        List[List[int]]: Lista de individuos ingresados manualmente que son válidos.
-
-    Example:
-        >>> ingresarPoblacionInicial([], [3,2], [2,3], 20, 2)
-        Ingresa los valores binarios del individuo separados por espacios: 1 0 1 0 1
-        Ingresa los valores binarios del individuo separados por espacios: 1 1 1 1 0
-        [[1, 0, 1, 0, 1], [1, 1, 1, 1, 0]]
-    """
-    while len(poblacionInicial) < tamPoblacion:
-        individuo = input("Ingresa los valores binarios del individuo separados por espacios: ").split(" ")
-        if len(individuo) != np.sum(fenotipo):
-            print("El número de bits no coincide con el tamaño del fenotipo.")
-        else:
-            individuo = [int(bit) for bit in individuo]
-            if esFactible(individuo, fenotipo, funcionFitnness, restriccion):
-                poblacionInicial.append(individuo)
-            else:
-                print("El individuo no es factible según la restricción.")
-    return poblacionInicial
-
 def igualdad(poblacion, Pterminacion):
     """Verifica si una población ha convergido según un porcentaje de terminación dado.
 
@@ -253,30 +181,6 @@ def igualdad(poblacion, Pterminacion):
             mayor = contador
     return mayor/len(poblacion) < Pterminacion
 
-def funcionPesos(poblacion, funcion, fenotipo):
-    """Calcula el valor de evaluación (peso o fitness) de cada individuo en una población.
-
-    Para cada individuo en la población, aplica la función objetivo decodificando las variables
-    a partir de su representación binaria usando el fenotipo.
-
-    Args:
-        poblacion (List[List[int]]): Lista de individuos binarios (listas de bits).
-        funcion (List[int]): Coeficientes de la función objetivo.
-        fenotipo (List[int]): Lista con el número de bits por variable para decodificar cada individuo.
-
-    Returns:
-        np.ndarray: Arreglo de valores numéricos (pesos o fitness) correspondientes a cada individuo.
-
-    Example:
-        >>> funcionPesos([[1,0,1,0,1], [1,1,0,1,0]], [2,3], [3,2])
-        array([13, 17])  # Según cómo decodifique resultadoFuncion()
-    """
-    pesos = []
-    for individuo in poblacion:
-        peso = resultadoFuncion(individuo, funcion, fenotipo)
-        pesos.append(peso)
-    return np.array(pesos)
-
 def mayor(fitness):
     """Encuentra el índice del individuo con el mayor valor de fitness.
 
@@ -298,6 +202,28 @@ def mayor(fitness):
             mayor = i
     return mayor
 
+def suma_funcion(individuo, resultado_funcion):
+    """Calcula la suma de los valores de la función objetivo para un individuo dado.
+
+    Suma los valores de la función objetivo para cada variable del individuo, usando los resultados
+    previamente calculados en `resultado_funcion`.
+
+    Args:
+        individuo (List[int]): Lista de bits que representa un individuo.
+        resultado_funcion (List[float]): Lista con los resultados de la función objetivo para cada variable.
+
+    Returns:
+        float: Suma total de los valores de la función objetivo para el individuo.
+
+    Example:
+        >>> suma_funcion([1, 0, 1], [2.0, 3.0, 4.0])
+        9.0
+    """
+    suma = 0
+    for i in range(len(individuo)):
+        suma += resultado_funcion[i][individuo[i]]
+    return suma
+
 def resultados_funcion(funcion, fenotipo,):
     """Genera una matriz de resultados para cada valor del fenotipo según la función dada.
     Para cada valor en el fenotipo, evalúa la función con los coeficientes correspondientes y
@@ -315,47 +241,53 @@ def resultados_funcion(funcion, fenotipo,):
         >>> resultados_funcion(funcion, fenotipo)
         [[2.0, 3.0, 4.0], [4.0, 6.0, 8.0], [6.0, 9.0, 12.0]]
     """
+    print("Entro funcion resultados")
     matriz = []
     pos = 0
     for valor in fenotipo:
         fila = []
-        for i in range(valor):
+        for i in range(valor+1):
+            print(funcion[pos])
             fila.append(evaluar_funcion(funcion[pos],i))
+            print("Salio de evaluar funcion")
         matriz.append(fila)
         pos += 1
+    print(matriz)
     return matriz
 
 def evaluar_funcion(funcion_str, valor_x):
     """Evalúa una función algebraica representada como string, reemplazando 'x' por un valor numérico.
     La función puede contener operaciones básicas, funciones trigonométricas y raíces.
     Args:
-        funcion_str (str): Cadena que representa la función algebraica, como '2x+3x+5x'.
+        funcion_str (str): Cadena que representa la función algebraica, como '2x'.
         valor_x (float or int): Valor numérico que reemplazará a 'x' en la función.
     Returns:
         float: Resultado de evaluar la función con el valor dado.
     Example:
-        >>> evaluar_funcion("2*x + 3*x + 5*x", 10
+        >>> evaluar_funcion("2*x")
         80.0
     """
+    print("Entro a evaluar funcion")
+    funcion_str = re.sub(r'(\d)([a-zA-Z])', r'\1*\2', funcion_str)
     # Reemplazar 'x' por su valor numérico
     funcion_str = re.sub(r"[XxZz]", f"({valor_x})", funcion_str)    
 
     # Reemplazos básicos
-    funcion = funcion.replace("^", "**")
-    funcion = funcion.replace("pi", "math.pi")
-    funcion = funcion.replace("e", "math.e")
+    funcion_str = funcion_str.replace("^", "**")
+    funcion_str = funcion_str.replace("pi", "math.pi")
+    funcion_str = funcion_str.replace("e", "math.e")
 
-    # Funciones estándar
-    funcion = funcion.replace("sin(", "math.sin(")
-    funcion = funcion.replace("cos(", "math.cos(")
-    funcion = funcion.replace("tan(", "math.tan(")
-    funcion = funcion.replace("log(", "math.log10(")
-    funcion = funcion.replace("sqrt(", "math.sqrt(")
+    # funcion_stres estándar
+    funcion_str = funcion_str.replace("sin(", "math.sin(")
+    funcion_str = funcion_str.replace("cos(", "math.cos(")
+    funcion_str = funcion_str.replace("tan(", "math.tan(")
+    funcion_str = funcion_str.replace("log(", "math.log10(")
+    funcion_str = funcion_str.replace("sqrt(", "math.sqrt(")
 
-    # Funciones recíprocas
-    funcion = funcion.replace("cot(", "1/math.tan(")
-    funcion = funcion.replace("csc(", "1/math.sin(")
-    funcion = funcion.replace("sec(", "1/math.cos(")
+    # funcion_stres recíprocas
+    funcion_str = funcion_str.replace("cot(", "1/math.tan(")
+    funcion_str = funcion_str.replace("csc(", "1/math.sin(")
+    funcion_str = funcion_str.replace("sec(", "1/math.cos(")
 
     # Reemplazo personalizado para root(n,x) → (x)**(1/n)
     def reemplazo_root(match):
@@ -366,45 +298,13 @@ def evaluar_funcion(funcion_str, valor_x):
         except:
             raise ValueError("Error en la sintaxis de root(n,x). Use coma para separar n y x.")
 
-    funcion = re.sub(r"root\((.*?)\)", reemplazo_root, funcion)
-
+    funcion_str = re.sub(r"root\((.*?)\)", reemplazo_root, funcion_str)
+    print("termino de evaluar funcion " + funcion_str)
     try:
-        resultado = eval(funcion, {"math": math})
+        resultado = eval(funcion_str, {"math": math})
         return resultado
     except Exception as e:
         raise ValueError(f"Error al evaluar la función: {e}")
-
-
-def parsear_restriccion(expresion):
-    """
-    Parsea una expresión como:
-    "4130X1 + 4210X2 + 2400X3 + ... <= 16000"
-    y retorna:
-    ([4130, 4210, 2400, ...], 16000)
-    """
-    try:
-        if "<=" not in expresion:
-            raise RestriccionInvalidaError("Falta el operador '<=' en la restricción.")
-        
-        izquierda, derecha = expresion.split("<=")
-        derecha = derecha.strip()
-
-        if not derecha.isdigit():
-            raise RestriccionInvalidaError("El valor límite a la derecha de '<=' no es válido.")
-
-        limite = int(derecha)
-
-        # Extraer los coeficientes antes de cada 'Xn'
-        coeficientes = re.findall(r'([+-]?\s*\d+)\s*X\d+', izquierda)
-        coeficientes = [int(c.replace(" ", "")) for c in coeficientes]
-
-        if not coeficientes:
-            raise RestriccionInvalidaError("No se encontraron coeficientes válidos en la restricción.")
-
-        return coeficientes, limite
-
-    except Exception as e:
-        raise RestriccionInvalidaError(f"Restricción inválida: {str(e)}")
 
 # Funciones de excepción para manejar errores específicos en la entrada de datos.
 # agregamos clases de excepción personalizadas para manejar errores comunes en la entrada de datos.
