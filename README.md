@@ -54,6 +54,8 @@ Este proyecto se encuentra bajo la licencia [MIT](LICENSE) (reemplaza si usas ot
 Para dudas o sugerencias, puedes abrir un issue en el repositorio o contactar al responsable principal:
 
 - GitHub: [Therealdavi836](https://github.com/Therealdavi836)
+- GitHub: [Therealdavi836](https://github.com/Therealdavi836)
+- GitHub: [Therealdavi836](https://github.com/Therealdavi836)
 
 ---
 
