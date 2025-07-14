@@ -3,6 +3,7 @@
         "generacion": 1,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "010111",
                 "fenotipo": [
                     0,
@@ -82,14 +83,23 @@
             },
             {
                 "cromosoma": "110110",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
                     0,
+<<<<<<< HEAD
+=======
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
@@ -97,10 +107,19 @@
                 "cromosoma": "011011",
                 "fenotipo": [
                     0,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     0,
                     1,
+<<<<<<< HEAD
                     1
                 ],
                 "objetivo": 7593,
@@ -130,11 +149,99 @@
                     1
                 ],
                 "objetivo": 5593,
+=======
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "010111",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 0,
                 1,
@@ -143,7 +250,11 @@
                 1,
                 1
             ],
+<<<<<<< HEAD
             "objetivo": 7601,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -151,7 +262,11 @@
         "generacion": 2,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "010111",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     0,
                     1,
@@ -160,6 +275,7 @@
                     1,
                     1
                 ],
+<<<<<<< HEAD
                 "objetivo": 7601,
                 "factible": true
             },
@@ -278,11 +394,109 @@
                     0
                 ],
                 "objetivo": 6202,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "010111",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 0,
                 1,
@@ -291,7 +505,11 @@
                 1,
                 1
             ],
+<<<<<<< HEAD
             "objetivo": 7601,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -299,7 +517,11 @@
         "generacion": 3,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "010111",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     0,
                     1,
@@ -334,6 +556,7 @@
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
@@ -382,7 +605,66 @@
                     1,
                     1,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
                     0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+<<<<<<< HEAD
+                "objetivo": 6202,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+=======
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    0,
+<<<<<<< HEAD
                     1,
                     0
                 ],
@@ -413,24 +695,63 @@
                     0
                 ],
                 "objetivo": 6202,
+=======
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
                 "factible": true
             },
             {
-                "cromosoma": "111010",
+                "cromosoma": "101000",
                 "fenotipo": [
-                    1,
-                    1,
                     1,
                     0,
                     1,
+                    0,
+                    0,
                     0
                 ],
-                "objetivo": 6202,
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "010111",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 0,
                 1,
@@ -439,7 +760,11 @@
                 1,
                 1
             ],
+<<<<<<< HEAD
             "objetivo": 7601,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -447,7 +772,11 @@
         "generacion": 4,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "010111",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     0,
                     1,
@@ -456,6 +785,7 @@
                     1,
                     1
                 ],
+<<<<<<< HEAD
                 "objetivo": 7601,
                 "factible": true
             },
@@ -535,11 +865,15 @@
                     0
                 ],
                 "objetivo": 4484,
+=======
+                "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             },
             {
                 "cromosoma": "111010",
                 "fenotipo": [
+<<<<<<< HEAD
                     1,
                     1,
                     1,
@@ -552,14 +886,58 @@
             },
             {
                 "cromosoma": "010110",
-                "fenotipo": [
+=======
                     0,
-                    1,
+                    0,
                     0,
                     1,
                     1,
                     0
                 ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+<<<<<<< HEAD
+=======
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    1,
+                    0
+                ],
+<<<<<<< HEAD
                 "objetivo": 5801,
                 "factible": true
             },
@@ -574,11 +952,57 @@
                     1
                 ],
                 "objetivo": 7601,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "010111",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 0,
                 1,
@@ -587,7 +1011,11 @@
                 1,
                 1
             ],
+<<<<<<< HEAD
             "objetivo": 7601,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -595,7 +1023,11 @@
         "generacion": 5,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "010111",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     0,
                     1,
@@ -604,11 +1036,19 @@
                     1,
                     1
                 ],
+<<<<<<< HEAD
                 "objetivo": 7601,
                 "factible": true
             },
             {
                 "cromosoma": "010111",
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     0,
                     1,
@@ -643,17 +1083,68 @@
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
             {
                 "cromosoma": "110110",
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
                 "fenotipo": [
                     1,
                     1,
                     0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
                     1,
+<<<<<<< HEAD
                     1,
+=======
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    0,
+                    1,
+                    0,
+                    1,
+<<<<<<< HEAD
                     0
                 ],
                 "objetivo": 6210,
@@ -687,6 +1178,29 @@
             },
             {
                 "cromosoma": "110110",
+=======
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
@@ -721,12 +1235,20 @@
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 4127,
+=======
+                "objetivo": 1,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 1,
                 1,
@@ -735,7 +1257,11 @@
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -743,7 +1269,11 @@
         "generacion": 6,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
@@ -752,6 +1282,7 @@
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 8210,
                 "factible": true
             },
@@ -779,18 +1310,28 @@
                     1
                 ],
                 "objetivo": 7601,
+=======
+                "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             },
             {
                 "cromosoma": "011011",
                 "fenotipo": [
                     0,
+<<<<<<< HEAD
                     1,
                     1,
                     0,
+=======
+                    0,
+                    0,
+                    1,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1
                 ],
+<<<<<<< HEAD
                 "objetivo": 7593,
                 "factible": true
             },
@@ -801,9 +1342,22 @@
                     1,
                     0,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
                     1,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    0,
+                    0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
@@ -814,31 +1368,67 @@
                     1,
                     0,
                     1,
+=======
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
                     1,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    0,
+                    0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
             {
                 "cromosoma": "110110",
+=======
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
                     0,
                     1,
+<<<<<<< HEAD
+=======
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
+                    0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
             {
                 "cromosoma": "110110",
+=======
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
+                    0,
+                    0,
                     1,
                     1,
                     0,
+<<<<<<< HEAD
                     1,
                     1,
                     0
@@ -851,11 +1441,25 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     0,
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 4127,
                 "factible": true
             },
@@ -870,11 +1474,31 @@
                     0
                 ],
                 "objetivo": 6135,
+=======
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 1,
                 1,
@@ -883,7 +1507,11 @@
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -891,7 +1519,11 @@
         "generacion": 7,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
@@ -900,6 +1532,7 @@
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 8210,
                 "factible": true
             },
@@ -947,11 +1580,22 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     0,
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
@@ -966,6 +1610,9 @@
                     0
                 ],
                 "objetivo": 6210,
+=======
+                "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             },
             {
@@ -982,11 +1629,16 @@
                 "factible": true
             },
             {
+<<<<<<< HEAD
                 "cromosoma": "110000",
+=======
+                "cromosoma": "110100",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
                     0,
+<<<<<<< HEAD
                     0,
                     0,
                     0
@@ -1000,29 +1652,89 @@
                     1,
                     0,
                     1,
+=======
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     0,
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 2409,
                 "factible": true
             },
             {
                 "cromosoma": "000111",
+=======
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
+<<<<<<< HEAD
                     1,
                     1
                 ],
                 "objetivo": 5883,
+=======
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
+=======
+            "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "fenotipo": [
                 1,
                 1,
@@ -1031,7 +1743,11 @@
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -1039,7 +1755,11 @@
         "generacion": 8,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
+=======
+                "cromosoma": "000110",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     1,
@@ -1048,6 +1768,7 @@
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 8210,
                 "factible": true
             },
@@ -1075,18 +1796,28 @@
                     1
                 ],
                 "objetivo": 7601,
+=======
+                "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             },
             {
                 "cromosoma": "010111",
                 "fenotipo": [
                     0,
+<<<<<<< HEAD
                     1,
                     0,
+=======
+                    0,
+                    0,
+                    1,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     1
                 ],
+<<<<<<< HEAD
                 "objetivo": 7601,
                 "factible": true
             },
@@ -1108,11 +1839,22 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     0,
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
@@ -1166,20 +1908,100 @@
                     0
                 ],
                 "objetivo": 8210,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -1187,6 +2009,7 @@
         "generacion": 9,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
                 "fenotipo": [
                     1,
@@ -1269,11 +2092,18 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     0,
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
                 "factible": true
             },
@@ -1309,25 +2139,130 @@
                     1,
                     1,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 8210,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -1335,6 +2270,7 @@
         "generacion": 10,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
                 "fenotipo": [
                     1,
@@ -1417,11 +2353,44 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     0,
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 4127,
                 "factible": true
             },
@@ -1453,29 +2422,107 @@
             },
             {
                 "cromosoma": "101110",
+=======
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "fenotipo": [
                     1,
                     0,
                     1,
+<<<<<<< HEAD
+=======
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6492,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -1483,6 +2530,7 @@
         "generacion": 11,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
                 "fenotipo": [
                     1,
@@ -1579,10 +2627,31 @@
                     1,
                     1,
                     1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
                     1,
                     1,
                     0
                 ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    1,
+                    0
+                ],
+<<<<<<< HEAD
                 "objetivo": 8210,
                 "factible": true
             },
@@ -1591,11 +2660,22 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     0,
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 4127,
                 "factible": true
             },
@@ -1604,121 +2684,64 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "100100",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6135,
-                "factible": true
-            }
-        ],
-        "mejor": {
-            "cromosoma": "111110",
-            "fenotipo": [
-                1,
-                1,
-                1,
-                1,
-                1,
-                0
-            ],
-            "objetivo": 8210,
-            "factible": true
-        }
-    },
-    {
-        "generacion": 12,
-        "individuos": [
-            {
-                "cromosoma": "111110",
-                "fenotipo": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 8210,
+=======
+                "objetivo": 8,
                 "factible": true
             },
             {
-                "cromosoma": "111110",
+                "cromosoma": "100000",
                 "fenotipo": [
                     1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 8210,
-                "factible": true
-            },
-            {
-                "cromosoma": "111110",
-                "fenotipo": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 8210,
-                "factible": true
-            },
-            {
-                "cromosoma": "111110",
-                "fenotipo": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 8210,
-                "factible": true
-            },
-            {
-                "cromosoma": "111110",
-                "fenotipo": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 8210,
-                "factible": true
-            },
-            {
-                "cromosoma": "111110",
-                "fenotipo": [
-                    1,
-                    1,
-                    1,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 8210,
-                "factible": true
-            },
-            {
-                "cromosoma": "111100",
-                "fenotipo": [
-                    1,
-                    1,
-                    1,
-                    1,
+                    0,
+                    0,
+                    0,
                     0,
                     0
                 ],
-                "objetivo": 6135,
+                "objetivo": 1,
                 "factible": true
             },
             {
@@ -1731,6 +2754,230 @@
                     0,
                     0
                 ],
+                "objetivo": 7,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                "factible": true
+            }
+        ],
+        "mejor": {
+<<<<<<< HEAD
+            "cromosoma": "111110",
+            "fenotipo": [
+                1,
+                1,
+                1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                1,
+                1,
+                0
+            ],
+<<<<<<< HEAD
+            "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+            "factible": true
+        }
+    },
+    {
+        "generacion": 12,
+        "individuos": [
+            {
+<<<<<<< HEAD
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    1,
+                    0
+                ],
+<<<<<<< HEAD
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    1,
+                    0
+                ],
+<<<<<<< HEAD
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111100",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    0,
+                    0
+                ],
+<<<<<<< HEAD
+                "objetivo": 6135,
+=======
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+<<<<<<< HEAD
                 "objetivo": 4135,
                 "factible": true
             },
@@ -1758,20 +3005,35 @@
                     0
                 ],
                 "objetivo": 8210,
+=======
+                "objetivo": 7,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -1779,6 +3041,7 @@
         "generacion": 13,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
                 "fenotipo": [
                     1,
@@ -1861,12 +3124,196 @@
                 "fenotipo": [
                     1,
                     1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     0,
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6210,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 14,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 1,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             },
             {
@@ -1879,6 +3326,7 @@
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 4135,
                 "factible": true
             },
@@ -1906,19 +3354,57 @@
                     0
                 ],
                 "objetivo": 6202,
+=======
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
             "factible": true
         }
@@ -2068,6 +3554,9 @@
                 0
             ],
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -2075,6 +3564,7 @@
         "generacion": 15,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
                 "fenotipo": [
                     1,
@@ -2158,10 +3648,31 @@
                     0,
                     1,
                     1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
                     1,
                     1,
                     0
                 ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    1,
+                    0
+                ],
+<<<<<<< HEAD
                 "objetivo": 7801,
                 "factible": true
             },
@@ -2184,10 +3695,35 @@
                     1,
                     1,
                     1,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "100100",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     0,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 6135,
                 "factible": true
             },
@@ -2197,25 +3733,91 @@
                     1,
                     1,
                     1,
+=======
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                     1,
                     1,
                     0
                 ],
+<<<<<<< HEAD
                 "objetivo": 8210,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     },
@@ -2223,6 +3825,7 @@
         "generacion": 16,
         "individuos": [
             {
+<<<<<<< HEAD
                 "cromosoma": "111110",
                 "fenotipo": [
                     1,
@@ -2345,25 +3948,4409 @@
                     0,
                     1,
                     1,
+=======
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
                     1,
                     1,
                     0
                 ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
+                    1,
+                    1,
+                    0
+                ],
+<<<<<<< HEAD
                 "objetivo": 7801,
+=======
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 "factible": true
             }
         ],
         "mejor": {
+<<<<<<< HEAD
             "cromosoma": "111110",
             "fenotipo": [
                 1,
                 1,
                 1,
+=======
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
                 1,
                 1,
                 0
             ],
+<<<<<<< HEAD
             "objetivo": 8210,
+=======
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 17,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 18,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 19,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "100100",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 20,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 21,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 22,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 23,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 24,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000100",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 25,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 26,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 27,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 28,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 29,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 30,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 31,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 32,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 1,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 33,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 34,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 35,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 36,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 37,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 38,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 39,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 40,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 41,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 1,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 1,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 42,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 43,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 44,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000010",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 45,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "100100",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 5,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 46,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 1,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 47,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "000000",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 0,
+                "factible": true
+            },
+            {
+                "cromosoma": "101100",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 8,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000100",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 48,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 49,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "110100",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "001100",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 7,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 50,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "010000",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 2,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "010100",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "110000",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "100000",
+                "fenotipo": [
+                    1,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 1,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+            "factible": true
+        }
+    },
+    {
+        "generacion": 51,
+        "individuos": [
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "000110",
+                "fenotipo": [
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 9,
+                "factible": true
+            },
+            {
+                "cromosoma": "001000",
+                "fenotipo": [
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 3,
+                "factible": true
+            },
+            {
+                "cromosoma": "101000",
+                "fenotipo": [
+                    1,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "objetivo": 4,
+                "factible": true
+            }
+        ],
+        "mejor": {
+            "cromosoma": "000110",
+            "fenotipo": [
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "objetivo": 9,
+>>>>>>> 27b50a54a8d3d6cc0bb0b6b439d820d87038062e
             "factible": true
         }
     }

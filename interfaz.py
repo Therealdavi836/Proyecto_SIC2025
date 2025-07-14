@@ -176,6 +176,8 @@ def ejecutar_algoritmo():
         }
         # 2. varaibles globales
         global valores_variables_decision, poblacion_guardada
+        if any(valor == 0 for valor in valores_variables_decision):
+            raise ValorVariableInvalidoError()
 
         # 3 creación del fenotipo el cual contine el tamaño parqa representar en binario cada variable de decisión
         fenotipo = []
