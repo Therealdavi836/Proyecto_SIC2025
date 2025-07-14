@@ -367,7 +367,7 @@ def ejecutar_algoritmo():
 
 
 def limpiar_campos():
-    for entrada in [entrada_cruce, entrada_mutacion, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo]:
+    for entrada in [entrada_cruce, entrada_mutacion, entrada_convergencia, entrada_tam_poblacion, entrada_generaciones, entrada_elitismo, entrada_restriccion, entrada_numero_variables]:
         entrada.delete(0, 'end')
     funcion_objetivo_str.set("")
     funcion_restriccion_str.set("")
