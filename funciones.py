@@ -316,6 +316,10 @@ class EntradaInvalidaError(Exception):
     """
     pass
 
+class ValorVariableInvalidoError(EntradaInvalidaError):
+    """Se lanza cuando el valor máximo de una variable de decisión es 0."""
+    def __init__(self):
+        super().__init__("El valor máximo para cada variable de decisión debe ser 1 o mayor. No se permiten ceros.")
 class ValorNoEnteroError(EntradaInvalidaError):
     """Se lanza cuando se espera un número entero pero se recibe otro tipo de dato.
 
