@@ -3,81 +3,68 @@
         "generacion": 1,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "110110",
                 "fenotipo": [
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "111010",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "010110",
                 "fenotipo": [
                     0,
+                    1,
                     0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 5801,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "010011",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     0,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
+                "objetivo": 5593,
                 "factible": true
             },
             {
@@ -86,7 +73,7 @@
                     1,
                     0,
                     0,
-                    0,
+                    1,
                     1,
                     0
                 ],
@@ -94,82 +81,69 @@
                 "factible": true
             },
             {
-                "cromosoma": "000100",
+                "cromosoma": "110110",
                 "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 2008,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "011011",
                 "fenotipo": [
+                    0,
+                    1,
                     1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 2484,
+                "objetivo": 7593,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "110011",
                 "fenotipo": [
                     1,
-                    0,
+                    1,
                     0,
                     0,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 4492,
+                "objetivo": 6002,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "010011",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
                     1,
                     0,
                     0,
-                    0,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 4492,
+                "objetivo": 5593,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "010111",
             "fenotipo": [
                 0,
-                0,
+                1,
                 0,
                 1,
                 1,
-                0
+                1
             ],
-            "objetivo": 6083,
+            "objetivo": 7601,
             "factible": true
         }
     },
@@ -177,173 +151,147 @@
         "generacion": 2,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "011011",
                 "fenotipo": [
                     0,
+                    1,
+                    1,
                     0,
+                    1,
+                    1
+                ],
+                "objetivo": 7593,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
+                    1,
                     0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
+                "cromosoma": "111010",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "110011",
                 "fenotipo": [
+                    1,
                     1,
                     0,
                     0,
-                    0,
-                    0,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 2484,
+                "objetivo": 6002,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "010011",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
                     1,
                     0,
                     0,
+                    1,
+                    1
+                ],
+                "objetivo": 5593,
+                "factible": true
+            },
+            {
+                "cromosoma": "111000",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
                     0,
                     0,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 4127,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "010010",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
+                    1,
                     0,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 3793,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "111010",
                 "fenotipo": [
                     1,
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 6202,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "010111",
             "fenotipo": [
                 0,
-                0,
+                1,
                 0,
                 1,
                 1,
-                0
+                1
             ],
-            "objetivo": 6083,
+            "objetivo": 7601,
             "factible": true
         }
     },
@@ -351,173 +299,147 @@
         "generacion": 3,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
+                    1,
                     0,
+                    1,
+                    1,
+                    1
+                ],
+                "objetivo": 7601,
+                "factible": true
+            },
+            {
+                "cromosoma": "011011",
+                "fenotipo": [
+                    0,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1
+                ],
+                "objetivo": 7593,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "110110",
                 "fenotipo": [
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "111010",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
                     1,
-                    0
-                ],
-                "objetivo": 4492,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "100000",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 409,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "111010",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "111010",
                 "fenotipo": [
+                    1,
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
                     0
                 ],
-                "objetivo": 0,
+                "objetivo": 6202,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 6202,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 6202,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 6202,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "010111",
             "fenotipo": [
                 0,
-                0,
+                1,
                 0,
                 1,
                 1,
-                0
+                1
             ],
-            "objetivo": 6083,
+            "objetivo": 7601,
             "factible": true
         }
     },
@@ -525,81 +447,81 @@
         "generacion": 4,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "011011",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
                     1,
                     1,
-                    0
+                    0,
+                    1,
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7593,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
+                    1,
                     0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100000",
+                "cromosoma": "111010",
                 "fenotipo": [
                     1,
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     0
                 ],
-                "objetivo": 409,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "111010",
                 "fenotipo": [
+                    1,
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
                     0
                 ],
-                "objetivo": 0,
+                "objetivo": 6202,
                 "factible": true
             },
             {
@@ -607,91 +529,65 @@
                 "fenotipo": [
                     1,
                     0,
-                    0,
                     1,
                     0,
+                    1,
                     0
                 ],
                 "objetivo": 4484,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111010",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "010110",
                 "fenotipo": [
                     0,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 5801,
+                "factible": true
+            },
+            {
+                "cromosoma": "010111",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                "objetivo": 7601,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "010111",
             "fenotipo": [
                 0,
-                0,
+                1,
                 0,
                 1,
                 1,
-                0
+                1
             ],
-            "objetivo": 6083,
+            "objetivo": 7601,
             "factible": true
         }
     },
@@ -699,173 +595,147 @@
         "generacion": 5,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
+                    1,
                     0,
+                    1,
+                    1,
+                    1
+                ],
+                "objetivo": 7601,
+                "factible": true
+            },
+            {
+                "cromosoma": "011011",
+                "fenotipo": [
+                    0,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1
+                ],
+                "objetivo": 7593,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
                     1,
-                    0
-                ],
-                "objetivo": 4492,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
+                "cromosoma": "111010",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
                     0
                 ],
-                "objetivo": 2075,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "110110",
                 "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 6210,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 6210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111000",
+                "fenotipo": [
+                    1,
+                    1,
                     1,
                     0,
                     0,
-                    0,
-                    0,
                     0
                 ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
+                "objetivo": 4127,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -873,173 +743,147 @@
         "generacion": 6,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "011011",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 4083,
+                "objetivo": 7593,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "110110",
                 "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000100",
+                "cromosoma": "110110",
                 "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 2008,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "110110",
                 "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "111000",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     0,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 4127,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "111100",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     0,
                     0
                 ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "100000",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 409,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4492,
+                "objetivo": 6135,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -1047,173 +891,147 @@
         "generacion": 7,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "011011",
                 "fenotipo": [
                     0,
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 2075,
+                "objetivo": 7593,
                 "factible": true
             },
             {
-                "cromosoma": "101010",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
                     1,
                     0,
-                    0
-                ],
-                "objetivo": 4484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "110110",
                 "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     0
                 ],
-                "objetivo": 2075,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
                     0
                 ],
-                "objetivo": 0,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "110000",
                 "fenotipo": [
+                    1,
                     1,
                     0,
                     0,
                     0,
-                    0,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 2127,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "101000",
                 "fenotipo": [
                     1,
                     0,
-                    0,
+                    1,
                     0,
                     0,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 2409,
                 "factible": true
             },
             {
-                "cromosoma": "001000",
+                "cromosoma": "000111",
                 "fenotipo": [
                     0,
                     0,
                     0,
                     1,
-                    0,
-                    0
-                ],
-                "objetivo": 2000,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
+                    1
                 ],
-                "objetivo": 4492,
+                "objetivo": 5883,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -1221,173 +1039,147 @@
         "generacion": 8,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
+                    1,
                     0,
                     1,
                     1,
-                    0
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
+                    1,
                     0,
                     1,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 4083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "011011",
                 "fenotipo": [
+                    0,
+                    1,
                     1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 2484,
+                "objetivo": 7593,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "110110",
                 "fenotipo": [
                     1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "111100",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     0,
                     0
                 ],
-                "objetivo": 2484,
+                "objetivo": 6135,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "011011",
                 "fenotipo": [
                     0,
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 2075,
+                "objetivo": 7593,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "111110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000100",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 2008,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -1395,173 +1187,147 @@
         "generacion": 9,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
+                    1,
                     0,
+                    1,
+                    1,
+                    1
+                ],
+                "objetivo": 7601,
+                "factible": true
+            },
+            {
+                "cromosoma": "010111",
+                "fenotipo": [
+                    0,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                "objetivo": 7601,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "011101",
                 "fenotipo": [
-                    0,
-                    0,
                     0,
                     1,
                     1,
-                    0
+                    1,
+                    0,
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 7526,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111001",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
                     1,
                     1,
-                    0
+                    1,
+                    0,
+                    0,
+                    1
                 ],
-                "objetivo": 6083,
+                "objetivo": 5927,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
+                "objetivo": 8210,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -1569,173 +1335,147 @@
         "generacion": 10,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
                     1,
                     1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
                     1,
                     1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000100",
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1
+                ],
+                "objetivo": 7601,
+                "factible": true
+            },
+            {
+                "cromosoma": "111000",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
                     0,
                     0,
+                    0
+                ],
+                "objetivo": 4127,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 2008,
+                "objetivo": 6202,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "101110",
                 "fenotipo": [
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
+                "objetivo": 6492,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -1743,173 +1483,147 @@
         "generacion": 11,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001100",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 4008,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "100110",
+                "cromosoma": "111110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4492,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "010111",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
+                    1,
                     0,
                     1,
-                    0
+                    1,
+                    1
                 ],
-                "objetivo": 4083,
+                "objetivo": 7601,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "111000",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     0,
                     0,
                     0
                 ],
-                "objetivo": 2075,
+                "objetivo": 4127,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111100",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
                     1,
+                    1,
+                    1,
+                    1,
+                    0,
                     0
                 ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
+                "objetivo": 6135,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -1917,173 +1631,147 @@
         "generacion": 12,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
                     1,
                     1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
                     1,
                     1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "111100",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     0,
                     0
                 ],
-                "objetivo": 2075,
+                "objetivo": 6135,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "110100",
                 "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
                     0,
                     0
                 ],
-                "objetivo": 2075,
+                "objetivo": 4135,
+                "factible": true
+            },
+            {
+                "cromosoma": "111100",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "objetivo": 6135,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -2091,173 +1779,147 @@
         "generacion": 13,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
                     0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 6210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "110100",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     0,
                     1,
+                    0,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 4135,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
                     1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
                     1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
                     1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    0
+                ],
+                "objetivo": 6202,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -2265,173 +1927,147 @@
         "generacion": 14,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "110110",
+                "fenotipo": [
+                    1,
+                    1,
                     0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 6210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111010",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
                     0,
                     1,
                     0
                 ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4492,
+                "objetivo": 6202,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -2439,173 +2075,147 @@
         "generacion": 15,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "111110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000010",
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "011110",
                 "fenotipo": [
                     0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 7801,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111100",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
                     0,
                     0
                 ],
-                "objetivo": 2075,
+                "objetivo": 6135,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     },
@@ -2613,869 +2223,147 @@
         "generacion": 16,
         "individuos": [
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "001110",
+                "cromosoma": "111110",
                 "fenotipo": [
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     1,
                     0
                 ],
-                "objetivo": 6083,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
+                "cromosoma": "111110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "100000",
-                "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 409,
-                "factible": true
-            },
-            {
-                "cromosoma": "100000",
-                "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 409,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000100",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
                     1,
                     0
                 ],
-                "objetivo": 2008,
+                "objetivo": 8210,
                 "factible": true
             },
             {
-                "cromosoma": "100010",
+                "cromosoma": "111110",
                 "fenotipo": [
                     1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 0,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
+                    1,
+                    1,
+                    1,
                     1,
                     0
                 ],
-                "objetivo": 4083,
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "111110",
+                "fenotipo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 8210,
+                "factible": true
+            },
+            {
+                "cromosoma": "011110",
+                "fenotipo": [
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "objetivo": 7801,
                 "factible": true
             }
         ],
         "mejor": {
-            "cromosoma": "001110",
+            "cromosoma": "111110",
             "fenotipo": [
-                0,
-                0,
-                0,
+                1,
+                1,
+                1,
                 1,
                 1,
                 0
             ],
-            "objetivo": 6083,
-            "factible": true
-        }
-    },
-    {
-        "generacion": 17,
-        "individuos": [
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "100000",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 409,
-                "factible": true
-            },
-            {
-                "cromosoma": "100000",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 409,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4492,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001000",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0
-                ],
-                "objetivo": 2000,
-                "factible": true
-            }
-        ],
-        "mejor": {
-            "cromosoma": "001110",
-            "fenotipo": [
-                0,
-                0,
-                0,
-                1,
-                1,
-                0
-            ],
-            "objetivo": 6083,
-            "factible": true
-        }
-    },
-    {
-        "generacion": 18,
-        "individuos": [
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0
-                ],
-                "objetivo": 4075,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4492,
-                "factible": true
-            }
-        ],
-        "mejor": {
-            "cromosoma": "001110",
-            "fenotipo": [
-                0,
-                0,
-                0,
-                1,
-                1,
-                0
-            ],
-            "objetivo": 6083,
-            "factible": true
-        }
-    },
-    {
-        "generacion": 19,
-        "individuos": [
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000100",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 2008,
-                "factible": true
-            },
-            {
-                "cromosoma": "100110",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4492,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            }
-        ],
-        "mejor": {
-            "cromosoma": "001110",
-            "fenotipo": [
-                0,
-                0,
-                0,
-                1,
-                1,
-                0
-            ],
-            "objetivo": 6083,
-            "factible": true
-        }
-    },
-    {
-        "generacion": 20,
-        "individuos": [
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "001110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    1,
-                    1,
-                    0
-                ],
-                "objetivo": 6083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "100010",
-                "fenotipo": [
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2484,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000010",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-                "objetivo": 2075,
-                "factible": true
-            },
-            {
-                "cromosoma": "000110",
-                "fenotipo": [
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0
-                ],
-                "objetivo": 4083,
-                "factible": true
-            }
-        ],
-        "mejor": {
-            "cromosoma": "001110",
-            "fenotipo": [
-                0,
-                0,
-                0,
-                1,
-                1,
-                0
-            ],
-            "objetivo": 6083,
+            "objetivo": 8210,
             "factible": true
         }
     }

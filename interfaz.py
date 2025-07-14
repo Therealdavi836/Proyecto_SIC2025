@@ -2,6 +2,7 @@ import tkinter as tk
 import random
 import threading
 import time
+import traceback
 import json
 from tkinter import ttk, messagebox, filedialog
 from funciones import *
@@ -330,8 +331,9 @@ def ejecutar_algoritmo():
             cromosoma_str = "".join(map(str, cromosoma_bin))
             obj = suma_funcion(ind, valores_funcion_objetivo)
             factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion)
-            imprimir_y_guardar(f"{i+1:2d} | {cromosoma_str:28} | {str(ind):<14} | {obj:5.2f} | {'✔' if factible else '❌'}\n")
-        
+            fenotipo_limpio = [int(v) for v in ind]  # convierte cada valor a int puro
+            imprimir_y_guardar(f"{i+1:2d} | {cromosoma_str:28} | {fenotipo_limpio} | {obj:5.2f} | {'✔' if factible else '❌'}\n")
+
         # TERCERO: Actualizar la tabla visual con la navegación
         indice_generacion_actual = len(json_generaciones) - 1
         mostrar_generacion(indice_generacion_actual)
@@ -364,6 +366,8 @@ def ejecutar_algoritmo():
         
     except Exception as e:
         messagebox.showerror("Error", f"Error en entrada o ejecución: {str(e)}")
+        print("Error detallado en consola:")
+        traceback.print_exc()
 
 
 def limpiar_campos():
