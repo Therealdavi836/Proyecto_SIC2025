@@ -196,7 +196,7 @@ def ejecutar_algoritmo():
 
         # 6. Evolución
         generacion = 0
-        while generacion < parametros["generaciones"] or igualdad(poblacion, parametros["convergencia"]):
+        while generacion < parametros["generaciones"] and igualdad(poblacion, parametros["convergencia"]):
             nueva_poblacion = []
 
             fitness = []
