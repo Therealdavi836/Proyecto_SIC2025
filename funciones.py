@@ -44,14 +44,14 @@ def resultadoFuncion(individuo, fenotipo, funcion):
             fin +=  fenotipo[i+1]
     return resultado
 
-def generarPoblacionInicial(restriccion, tamPoblacion, varibles_decision, valores_funcion):
+def generarPoblacionInicial(restriccion, tamPoblacion, variables_decision, valores_funcion):
     """Genera una población inicial de individuos decimales factibles.
     Crea una lista de individuos donde cada individuo es una lista de enteros aleatorios,
     asegurando que cada uno cumple con una restricción lineal definida por `restriccion`.
     Args:
         restriccion (int or float): Límite superior de la restricción lineal que los individuos deben cumplir.
         tamPoblacion (int): Número total de individuos a generar.
-        varibles_decision (List[int]): Lista con el número de variables de decisión (no se usa directamente aquí).
+        variables_decision (List[int]): Lista con el número de variables de decisión (no se usa directamente aquí).
         valores_funcion (List[List[int]]): Matriz donde cada fila contiene los valores posibles para cada variable.
     Returns:
         List[List[int]]: Lista de individuos, donde cada individuo es una lista de enteros
@@ -63,9 +63,9 @@ def generarPoblacionInicial(restriccion, tamPoblacion, varibles_decision, valore
     poblacion = []
     while len(poblacion) < tamPoblacion:
         individuo = []
-        for valor in varibles_decision:
+        for valor in variables_decision:
             individuo.append(random.randint(0,valor))
-        if esFactible(individuo, restriccion, valores_funcion):
+        if esFactible(individuo, restriccion, valores_funcion, variables_decision):
             poblacion.append(individuo)
     return poblacion
 
@@ -89,7 +89,7 @@ def convertirBinarioADecimal(fraccion):
     """
     decimal = 0
     for i in range(len(fraccion)):
-        decimal += fraccion[i] * (2 ** ((len(fraccion) - i))-1)
+        decimal += fraccion[i] * (2 ** ((len(fraccion) - i - 1)))
     return decimal
 
 def decimales_a_binario(valores, tamaños):
@@ -129,11 +129,11 @@ def listaDecimales(individuo, fenotipo):
     for bits in fenotipo:
         segmento = individuo[indice:indice + bits]
         decimal = convertirBinarioADecimal(segmento)
-        resultado.append(decimal)
+        resultado.append(int(decimal))
         indice += bits
     return resultado
 
-def esFactible(individuo, restriccion, valores_funcion):
+def esFactible(individuo, restriccion, valores_funcion, fenotipo):
     """Verifica si un individuo cumple con una restricción lineal.
     Calcula el valor de la función objetivo para el individuo dado y verifica si está dentro del límite permitido.
     Args:
@@ -150,6 +150,8 @@ def esFactible(individuo, restriccion, valores_funcion):
     """
     resultado = 0
     for i in range(len(individuo)):
+        if fenotipo[i]<individuo[i]:
+            return False
         resultado += valores_funcion[i][individuo[i]]
     return resultado <= restriccion
 
@@ -241,18 +243,14 @@ def resultados_funcion(funcion, fenotipo,):
         >>> resultados_funcion(funcion, fenotipo)
         [[2.0, 3.0, 4.0], [4.0, 6.0, 8.0], [6.0, 9.0, 12.0]]
     """
-    print("Entro funcion resultados")
     matriz = []
     pos = 0
     for valor in fenotipo:
         fila = []
         for i in range(valor+1):
-            print(funcion[pos])
             fila.append(evaluar_funcion(funcion[pos],i))
-            print("Salio de evaluar funcion")
         matriz.append(fila)
         pos += 1
-    print(matriz)
     return matriz
 
 def evaluar_funcion(funcion_str, valor_x):
@@ -267,7 +265,6 @@ def evaluar_funcion(funcion_str, valor_x):
         >>> evaluar_funcion("2*x")
         80.0
     """
-    print("Entro a evaluar funcion")
     funcion_str = re.sub(r'(\d)([a-zA-Z])', r'\1*\2', funcion_str)
     # Reemplazar 'x' por su valor numérico
     funcion_str = re.sub(r"[XxZz]", f"({valor_x})", funcion_str)    
@@ -299,7 +296,6 @@ def evaluar_funcion(funcion_str, valor_x):
             raise ValueError("Error en la sintaxis de root(n,x). Use coma para separar n y x.")
 
     funcion_str = re.sub(r"root\((.*?)\)", reemplazo_root, funcion_str)
-    print("termino de evaluar funcion " + funcion_str)
     try:
         resultado = eval(funcion_str, {"math": math})
         return resultado
