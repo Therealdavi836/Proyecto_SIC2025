@@ -54,7 +54,7 @@ def mostrar_grafica():
     
     # Botón para guardar la imagen
     btn_guardar = tk.Button(ventana_grafica, text="💾 Guardar Gráfica", 
-                           command=lambda: guardar_grafica(fig))
+    command=lambda: guardar_grafica(fig))
     btn_guardar.pack(pady=10)
 
 def guardar_grafica(fig):
@@ -220,7 +220,7 @@ def ejecutar_algoritmo():
                 else:  # Ranking
                     padre1 = seleccion_ranking(fitness, poblacion)
                     padre2 = seleccion_ranking(fitness, poblacion)
-                
+
                 padre1 = decimales_a_binario(padre1, fenotipo)
                 padre2 = decimales_a_binario(padre2, fenotipo)
 
@@ -234,7 +234,6 @@ def ejecutar_algoritmo():
                         hijo1, hijo2 = cruce_uniforme(padre1, padre2, sum(fenotipo))
                 else:
                     hijo1, hijo2 = padre1, padre2
-
 
                 # Mutación
                 if parametros["mutacion_tipo"] == "Bit flip":
@@ -251,9 +250,9 @@ def ejecutar_algoritmo():
                 hijo2 = listaDecimales(hijo2, fenotipo)
 
                 # Validar factibilidad
-                if esFactible(hijo1, parametros["restriccion"], valores_funcion_restriccion):
+                if esFactible(hijo1, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision):
                     nueva_poblacion.append(hijo1)
-                if len(nueva_poblacion) < parametros["poblacion"] and esFactible(hijo2, parametros["restriccion"], valores_funcion_restriccion):
+                if len(nueva_poblacion) < parametros["poblacion"] and esFactible(hijo2, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision):
                     nueva_poblacion.append(hijo2)
 
             poblacion = nueva_poblacion
@@ -270,9 +269,9 @@ def ejecutar_algoritmo():
 
             for i, ind in enumerate(poblacion):
                 cromosoma = "".join(str(bit) for bit in ind)
-                fenotipo_vals = [int(z) for z in listaDecimales(ind, fenotipo)]
+                fenotipo_vals = [int(z) for z in ind]
                 obj = suma_funcion(ind, valores_funcion_objetivo)
-                factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion)
+                factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision)
                 tabla_generacion += f"{i+1:2d} | {cromosoma:28} | {fenotipo_vals} | {obj:5} | {'✔' if factible else '❌'}\n"
 
             historial_resultados_csv_completo.append(tabla_generacion)
@@ -287,9 +286,9 @@ def ejecutar_algoritmo():
             # Guardar datos de individuos
             for ind in poblacion:
                 cromosoma = "".join(str(bit) for bit in ind)
-                fenotipo_vals = [int(z) for z in listaDecimales(ind, fenotipo)]
+                fenotipo_vals = [int(z) for z in ind]
                 obj = suma_funcion(ind, valores_funcion_objetivo)
-                factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion)
+                factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision)
                 
                 datos_generacion["individuos"].append({
                     "cromosoma": cromosoma,
@@ -300,12 +299,12 @@ def ejecutar_algoritmo():
 
             # Guardar mejor solución de la generación
             mejor_gen = max(poblacion, key=lambda ind: suma_funcion(ind, valores_funcion_objetivo))
-            mejor_fenotipo = [int(z) for z in listaDecimales(mejor_gen, fenotipo)]
+            mejor_fenotipo = [int(z) for z in mejor_gen]
             datos_generacion["mejor"] = {
                 "cromosoma": "".join(str(bit) for bit in mejor_gen),
                 "fenotipo": mejor_fenotipo,
                 "objetivo": suma_funcion(mejor_gen, valores_funcion_objetivo),
-                "factible": esFactible(mejor_gen, parametros["restriccion"], valores_funcion_restriccion)
+                "factible": esFactible(mejor_gen, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision)
             }
 
             # Añadir al historial JSON
@@ -323,7 +322,7 @@ def ejecutar_algoritmo():
         mejores = sorted(poblacion, key=lambda ind: suma_funcion(ind, valores_funcion_objetivo), reverse=True)
         mejor = mejores[0]
         resultado = suma_funcion(mejor, valores_funcion_objetivo)
-        valores = [int(v) for v in listaDecimales(mejor, fenotipo)]
+        valores = [int(v) for v in mejor]
 
         # SEGUNDO: Mostrar la tabla de la última generación en la interfaz
         imprimir_y_guardar("\n--- Tabla de la Última Generación ---\n")
@@ -332,7 +331,7 @@ def ejecutar_algoritmo():
             cromosoma_bin = decimales_a_binario(ind, fenotipo)
             cromosoma_str = "".join(map(str, cromosoma_bin))
             obj = suma_funcion(ind, valores_funcion_objetivo)
-            factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion)
+            factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision)
             fenotipo_limpio = [int(v) for v in ind]  # convierte cada valor a int puro
             imprimir_y_guardar(f"{i+1:2d} | {cromosoma_str:28} | {fenotipo_limpio} | {obj:5.2f} | {'✔' if factible else '❌'}\n")
 
@@ -343,7 +342,7 @@ def ejecutar_algoritmo():
         # CUARTO: Mostrar el resumen de la mejor solución encontrada
         imprimir_y_guardar("\n--- Mejor Solución Global Encontrada ---\n")
         mejor_cromosoma_bin = decimales_a_binario(mejor, fenotipo)
-        imprimir_y_guardar(f"Cromosoma: {"".join(map(str, mejor_cromosoma_bin))}\n")
+        imprimir_y_guardar(f"Cromosoma: {''.join(map(str, mejor_cromosoma_bin))}\n")
         imprimir_y_guardar(f"Fenotipo decodificado: {valores}\n")
 
         expresion = funcion_objetivo_str.get()
