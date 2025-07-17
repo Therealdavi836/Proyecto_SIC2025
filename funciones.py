@@ -278,13 +278,7 @@ def evaluar_funcion(funcion_str, valor_x):
     funcion_str = funcion_str.replace("sin(", "math.sin(")
     funcion_str = funcion_str.replace("cos(", "math.cos(")
     funcion_str = funcion_str.replace("tan(", "math.tan(")
-    funcion_str = funcion_str.replace("log(", "math.log10(")
     funcion_str = funcion_str.replace("sqrt(", "math.sqrt(")
-
-    # funcion_stres recíprocas
-    funcion_str = funcion_str.replace("cot(", "1/math.tan(")
-    funcion_str = funcion_str.replace("csc(", "1/math.sin(")
-    funcion_str = funcion_str.replace("sec(", "1/math.cos(")
 
     # Reemplazo personalizado para root(n,x) → (x)**(1/n)
     def reemplazo_root(match):
