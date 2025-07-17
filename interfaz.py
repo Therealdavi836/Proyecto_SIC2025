@@ -454,7 +454,7 @@ def mostrar_calculadora(label_tipo):
     botones_frame.pack()
 
     for i, (texto, valor) in enumerate(botones):
-        tk.Button(botones_frame, text=texto, width=5, command=lambda v=valor: insertar(v)).grid(row=i//6, column=i%6, padx=2, pady=2)
+        tk.Button(botones_frame, text=texto, width=5, command=lambda v=valor: insertar(v)).grid(row=i//5, column=i%5, padx=2, pady=2)
 
     acciones_frame = tk.Frame(seccion_calculadora, bg="#eef")
     acciones_frame.pack(pady=5)
