@@ -429,7 +429,7 @@ def mostrar_calculadora(label_tipo):
         tecla = event.char
         if event.keysym in ["BackSpace", "Left", "Right", "Delete", "Tab"]:
             return
-        if tecla and tecla not in "0123456789+-*/()xXyY<> =":  # <-- Se agregó el espacio
+        if tecla and tecla not in "0123456789+-*/()xXyY,":  # <-- Se agregó el espacio
             return "break"
 
     entry_funcion.bind("<KeyPress>", limitar_entrada_teclado)
@@ -445,10 +445,9 @@ def mostrar_calculadora(label_tipo):
 
     botones = [
         ("+", "+"), ("-", "-"), ("*", "*"), ("÷", "/"),
-        ("x²", "^2"), ("x^y", "^"), ("√", "sqrt("), ("ⁿ√", "root("), 
-        ("log", "log("), ("π", "pi"), ("e", "e"), ("(", "("), 
-        (")", ")"), ("sin", "sin("), ("cos", "cos("), ("tan", "tan("),
-        ("cot", "cot("), ("csc", "csc("), ("sec", "sec(")
+        ("x²", "^2"), ("x^y", "^"), ("√", "sqrt("), ("ⁿ√", "root("),
+        ("π", "pi"), ("e", "e"), ("(", "("), (")", ")"), 
+        ("sin", "sin("), ("cos", "cos("), ("tan", "tan(")
     ]
 
     botones_frame = tk.Frame(seccion_calculadora, bg="#eef")
