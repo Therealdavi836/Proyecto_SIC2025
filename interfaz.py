@@ -116,7 +116,7 @@ def mostrar_generacion(indice):
         # Mostrar también el mejor
         mejor = gen["mejor"]
         resultados_text.insert("end", "\n🌟 Mejor individuo de esta generación:\n")
-        resultados_text.insert("end", f"Cromosoma: {mejor['cromosoma']}\n")
+        # resultados_text.insert("end", f"Cromosoma: {mejor['cromosoma']}\n")
         resultados_text.insert("end", f"Fenotipo: {mejor['fenotipo']}\n")
         resultados_text.insert("end", f"Objetivo: {mejor['objetivo']}\n")
         resultados_text.insert("end", f"Factible: {'✔' if mejor['factible'] else '❌'}\n")
@@ -268,7 +268,7 @@ def ejecutar_algoritmo():
             tabla_generacion += "-"*70 + "\n"
 
             for i, ind in enumerate(poblacion):
-                cromosoma = "".join(str(bit) for bit in ind)
+                cromosoma = "".join(str(bit) for bit in decimales_a_binario(ind, fenotipo))
                 fenotipo_vals = [int(z) for z in ind]
                 obj = suma_funcion(ind, valores_funcion_objetivo)
                 factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision)
@@ -285,7 +285,7 @@ def ejecutar_algoritmo():
 
             # Guardar datos de individuos
             for ind in poblacion:
-                cromosoma = "".join(str(bit) for bit in ind)
+                cromosoma = "".join(str(bit) for bit in decimales_a_binario(ind, fenotipo))
                 fenotipo_vals = [int(z) for z in ind]
                 obj = suma_funcion(ind, valores_funcion_objetivo)
                 factible = esFactible(ind, parametros["restriccion"], valores_funcion_restriccion, valores_variables_decision)
